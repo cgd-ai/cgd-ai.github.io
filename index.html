@@ -746,32 +746,26 @@ if (validataOS() == "Mac") {
         </p>
       <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
       <a href="https://www.patentguru.com/cn/search?inventor=%22%E9%99%88%E5%B9%BF%E5%A4%A7%22&assignee=%22%E7%BD%91%E6%98%93%22,%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%22&status=pat" class="award">授权专利</a>:
-        <ol>
-          <li>
-            <p>      <div class="linebigheight" align="left" id="ref7">
-              <a href="https://www.patentguru.com/cn/CN117950401B"  class="fontnorm bluelink">车辆避障控制方法、装置、设备及存储介质</a> 
-  
-            </div></p>
-          </li>
-          <li>
-            <p>      <div class="linebigheight" align="left" id="ref7">
-              <a href="https://www.patentguru.com/cn/CN115126020B"  class="fontnorm bluelink">一种挖掘机控制方法以及装置</a> 
-  
-            </div></p>
-          </li>
-          <li>
-            <p>      <div class="linebigheight" align="left" id="ref7">
-              <a href="https://www.patentguru.com/cn/CN115075313B"  class="fontnorm bluelink">控制信号量确定方法、装置、设备及存储介质</a> 
-  
-            </div></p>
-          </li>
-        <li>
-          <p>      <div class="linebigheight" align="left" id="ref7">
-            <a href="https://www.patentguru.com/cn/CN112304314B"  class="fontnorm bluelink">一种分布式多机器人的导航方法</a> 
-
-          </div></p>
-        </li>
-        </ol>
+      <ol id="patent-list"></ol>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+          <script>
+              fetch('patents.yaml')
+                  .then(response => response.text())
+                  .then(text => {
+                      const data = jsyaml.load(text);
+                      const patentList = document.getElementById('patent-list');
+                      data.patents.forEach(patent => {
+                          const listItem = document.createElement('li');
+                          listItem.innerHTML = `
+                              <div class="linebigheight" align="left">
+                                  <a href="${patent.url}" class="fontnorm bluelink">${patent.title}</a>
+                              </div>
+                          `;
+                          patentList.appendChild(listItem);
+                      });
+                  })
+                  .catch(error => console.error('Error loading YAML file:', error));
+          </script>
     </div>
     <hr color=#987cb9 SIZE=1 />
   </div>
