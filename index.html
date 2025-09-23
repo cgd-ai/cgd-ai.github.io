@@ -764,11 +764,11 @@ if (validataOS() == "Mac") {
                           const listItem = document.createElement('li');
                           let awardHtml = '';
                           if (patent.url === 'https://www.patentguru.com/cn/CN117950401B') {
-                            awardHtml = '<a class="award">Top 10 Invention Patents of NetEase in 2025</a>';
+                            awardHtml = "<a class='award'>NetEase\'s Top 10 Patents 2025</a>";
                           }
                           listItem.innerHTML = `
                               <div class="linebigheight" align="left">
-                                  <a href="${patent.url}" class="fontnorm bluelink">${patent.title}</a>${awardHtml}
+                                  <a href="${patent.url}" class="fontnorm bluelink">${patent.title}</a> ${awardHtml}
                               </div>
                           `;
                           patentList.appendChild(listItem);
