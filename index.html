@@ -201,18 +201,19 @@ if (validataOS() == "Mac") {
     </div>
     <div class="width75 leftfloat linebigheight" align="left" id="project_content">
       <p>
-        <a  class="fontnorm bluelink pub-venue" href="https://fuxi.163.com/productSummary/wj"> <b>Heavy Machine Automation
+        <a  class="fontnorm bluelink pub-venue" href="https://lingdong.fuxi.163.com/home?lang=en"> <b>Heavy Machine Automation
           </b></a> <a class="fontverysmall"><em>(2021 - now)</em></a> <br>
           Planning and Control Group, Fuxi Robotics in NetEase.
         <ul>
           <li>
-            <a href="https://fuxi.163.com/productSummary/wj"  class="bluelink">Robotic excavator</a> 
-            <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf"  class="bluelink">[PDF]</a>, <a href="https://youtu.be/N6I0WZGSF68"  class="bluelink">[Demo]</a>
-          </li>
-          <li>
-            <a href="https://fuxi.163.com/productSummary/loader"  class="bluelink">Unmanned loader</a>
+            <a href="https://lingdong.fuxi.163.com/productSummary/loader?lang=en"  class="bluelink">Unmanned loader</a>
             <a href="pdf/2023中国互联网大会创新十大典型案例.jpg"  class="bluelink">[Media]</a>
           </li>
+          <li>
+            <a href="https://lingdong.fuxi.163.com/productSummary/wj?lang=en"  class="bluelink">Robotic excavator</a> 
+            <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf"  class="bluelink">[PDF]</a>, <a href="https://youtu.be/N6I0WZGSF68"  class="bluelink">[Demo]</a>
+          </li>
+
         </ul>
       </p>
       <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
@@ -761,9 +762,13 @@ if (validataOS() == "Mac") {
                       const patentList = document.getElementById('patent-list');
                       data.patents.forEach(patent => {
                           const listItem = document.createElement('li');
+                          let awardHtml = '';
+                          if (patent.url === 'https://www.patentguru.com/cn/CN117950401B') {
+                            awardHtml = '<a class="award">Top 10 Invention Patents of NetEase in 2025</a>';
+                          }
                           listItem.innerHTML = `
                               <div class="linebigheight" align="left">
-                                  <a href="${patent.url}" class="fontnorm bluelink">${patent.title}</a>
+                                  <a href="${patent.url}" class="fontnorm bluelink">${patent.title}</a>${awardHtml}
                               </div>
                           `;
                           patentList.appendChild(listItem);
