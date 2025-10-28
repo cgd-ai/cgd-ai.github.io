@@ -533,3 +533,14 @@ td {
   border-bottom: none;
   }
   
+
+  .bibtexdiv {
+    background-color: #f5f5f5;
+    border-left: 4px solid #ccc;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+    display: none;
+    overflow-x: auto;
+}
