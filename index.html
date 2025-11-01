@@ -22,7 +22,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -298,7 +298,7 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #1a2a6c;
+            background: #1a5c6c;
             color: white;
             width: 50px;
             height: 50px;
@@ -322,18 +322,54 @@
             background: #2a3a7c;
             transform: translateY(-3px);
         }
+
+/* Projects页面布局样式 */
+.project-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-image {
+    flex: 0 0 280px;
+    text-align: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        flex: none;
+        width: 100%;
+        order: -1; /* 在小屏幕上图片显示在文字上面 */
+    }
+}
     </style>
 </head>
 <body>
     <!-- 头部 -->
     <header>
         <div class="container">
-            <img src="./pic/CGD3.jpg" alt="Guangda Chen" class="profile-img">
+            <a href="./day.html" id="icon" ><img src="./pic/CGD3.jpg" alt="Guangda Chen" class="profile-img"></a>
             <h1>Guangda Chen
                             <a class="subtitle" itemprop="sameAs" content="https://orcid.org/0000-0003-1888-9947" href="https://orcid.org/0000-0003-1888-9947" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a>
             </h1>
-            <p class="subtitle">Senior Robot Engineer & Postdoctoral Researcher</p>
-            <p>NetEase Fuxi Robotics & Zhejiang University</p>
+            <p class="subtitle">Senior Robot Engineer, Fuxi Robotics in NetEase</p>
+            <!-- <p>NetEase Fuxi Robotics</p> -->
         </div>
     </header>
     
@@ -396,7 +432,7 @@
             <h2 class="section-title">About Me</h2>
             
             <div class="content-section">
-                <h3>Professional Background</h3>
+                <h3>Biography</h3>
                  Dr. Guangda Chen is currently working as a Senior Robot Engineer at <a href="https://fuxi.163.com/"  class="bluelink">Fuxi Robotics in NetEase</a>.
         And he is also a postdoctoral researcher at the College of Control Science and Engineering, <a href="https://www.zju.edu.cn/"  class="bluelink">Zhejiang University</a>
         (advised by Prof. <a href="https://person.zju.edu.cn/0097062"  class="bluelink">Rong Xiong</a>).
@@ -477,16 +513,27 @@
             <h2 class="section-title">Projects</h2>
             
             <div class="content-section">
-                <h3>Heavy Machine Automation (2021 - Present)</h3>
-                <p>Planning and Control Group, Fuxi Robotics in NetEase.</p>
-                <ul>
-                    <li><a href="https://lingdong.fuxi.163.com/productSummary/loader?lang=en">Unmanned loader</a> <a href="pdf/2023中国互联网大会创新十大典型案例.jpg">[Media]</a></li>
-                    <li><a href="https://lingdong.fuxi.163.com/productSummary/wj?lang=en">Robotic excavator</a> <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf">[PDF]</a>, <a href="https://youtu.be/N6I0WZGSF68">[Demo]</a></li>
-                </ul>
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Heavy Machine Automation (2021 - Present)</h3>
+                        <p>Planning and Control Group, Fuxi Robotics in NetEase.</p>
+                        <ul>
+                            <li><a href="https://lingdong.fuxi.163.com/productSummary/loader?lang=en">Unmanned loader</a> <a href="pdf/2023中国互联网大会创新十大典型案例.jpg">[Media]</a></li>
+                            <li><a href="https://lingdong.fuxi.163.com/productSummary/wj?lang=en">Robotic excavator</a> <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf">[PDF]</a>, <a href="https://youtu.be/N6I0WZGSF68">[Demo]</a></li>
+                        </ul>
+                    </div>
+                    <div class="project-image">
+                        <img src="./pic/loader.jpg" alt="Heavy Machine Automation">
+                    </div>
+                </div>
             </div>
             
             <div class="content-section">
+
                 <h3>DRL-based Navigation (2019 - 2021)</h3>
+                
+                <div class="project-content">
+                    <div class="project-text">
                 <p><a href="https://github.com/DRL-Navigation">Open source code on GitHub</a></p>
                 <ul>
                     <li>DQN-based Obstacle Avoidance, <a href="https://youtu.be/Eq4AjsFH_cU">[Demo]</a></li>
@@ -495,23 +542,39 @@
                     <li>Crowd Navigation, <a href="https://www.bilibili.com/video/BV1Vb4y1D7R6">[Demo]</a></li>
                     <li>Crowd Navigation with Interaction Capacity</li>
                 </ul>
+                    </div>
+                    <div class="project-image">
+                        <img src="./pic/drl_nav.jpg" alt="Heavy Machine Automation">
+                    </div>
+                </div>
             </div>
             
             <div class="content-section">
-                <h3>Panda Robot (2020 - 2021)</h3>
-                <p>Tour guide robot at the <a href="https://www.panda.org.cn/en/education/framework/2023-07-16/7850.html">Chengdu Giant Panda Museum</a>.</p>
-                <ul>
-                    <li>Pedestrian detection and tracking, <a href="https://www.bilibili.com/video/BV1HB4y1P7xE">[Demo]</a></li>
-                    <li>Long-term robust localization, <a href="https://www.bilibili.com/video/BV1q5411w7qX">[Demo]</a></li>
-                    <li>Navigation in dense crowds, <a href="https://www.bilibili.com/video/BV13Z4y1A7br">[Brief Demo]</a>, <a href="https://www.bilibili.com/video/BV1wU4y1V7cA?share_source=copy_web">[Full Demo]</a></li>
-                    <li>Tour guide service v1.0, <a href="https://www.bilibili.com/video/BV1UM4y1u7t8">[Demo]</a></li>
-                </ul>
+
+                        <h3>Panda Robot (2020 - 2021)</h3>
+                <div class="project-content">
+                    <div class="project-text">
+                        <p>Tour guide robot at the <a href="https://www.panda.org.cn/en/education/framework/2023-07-16/7850.html">Chengdu Giant Panda Museum</a>.</p>
+                        <ul>
+                            <li>Pedestrian detection and tracking, <a href="https://www.bilibili.com/video/BV1HB4y1P7xE">[Demo]</a></li>
+                            <li>Long-term robust localization, <a href="https://www.bilibili.com/video/BV1q5411w7qX">[Demo]</a></li>
+                            <li>Navigation in dense crowds, <a href="https://www.bilibili.com/video/BV13Z4y1A7br">[Brief Demo]</a>, <a href="https://www.bilibili.com/video/BV1wU4y1V7cA?share_source=copy_web">[Full Demo]</a></li>
+                            <li>Tour guide service v1.0, <a href="https://www.bilibili.com/video/BV1UM4y1u7t8">[Demo]</a></li>
+                        </ul>
+                    </div>
+                    <div class="project-image">
+                        <img src="./pic/PandaBot.jpg" alt="Panda Robot">
+                    </div>
+                </div>
             </div>
             
             <div class="content-section">
+
                 <h3>Kejia Robot (2015 - 2019)</h3>
                 <p>Team: <a href="http://ai.ustc.edu.cn/en/robocup/atHome">WrightEagle@Home</a><br>
       <a href="pdf/tdp19.pdf"  class="bluelink">[TDP <img src="./pic/pdf.gif" />]</a>, <a href="pdf/poster19_athome.pdf"  class="bluelink">[Poster <img src="./pic/pdf.gif" />]</a>, <a href="pdf/ECRDC_USTC.pdf"  class="bluelink">[Report <img src="./pic/pdf.gif" />]</a>, <a href="https://youtu.be/sWi9EOKIhlE"  class="bluelink">[Demo]</a> </p>
+                      <div class="project-content">
+                    <div class="project-text">
       <table border="1" cellpadding="3" cellspacing="0">
         <tr>
           <th>Event</th>
@@ -550,10 +613,17 @@
           <td><a class="pub-authors fontsmall">Leader</a></td>
         </tr>
       </table>
+                          </div>
+                    <div class="project-image">
+                        <img src="./pic/kejia.jpg" alt="Panda Robot">
+                    </div>
+                </div>
             </div>
 
                         <div class="content-section">
                 <h3>MoCap System (2016 - 2018)</h3>
+                <div class="project-content">
+                    <div class="project-text">
                 <p>
                 for Testing: 
                 <br>
@@ -571,6 +641,11 @@
                 - <a href="http://www.sohu.com/a/217691740_100071565"  class="bluelink">Real Simulation Unified Platform</a>
                 <br>
             </p>
+                          </div>
+                    <div class="project-image">
+                        <img src="./pic/mcs.jpg" alt="MoCap System">
+                    </div>
+                </div>
             </div>
 
 
@@ -694,8 +769,11 @@
             </div>
             
             <div class="content-section">
-                <h3><a href="https://www.patentguru.com/cn/search?inventor=%22%E9%99%88%E5%B9%BF%E5%A4%A7%22&assignee=%22%E7%BD%91%E6%98%93%22,%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%22&status=pat" class="award">授权专利</a></h3>
-      <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
+                <h3>Granted Patents</h3>
+                      <p>All patents: 
+                    <a href="https://www.patentguru.com/cn/search?inventor=%22%E9%99%88%E5%B9%BF%E5%A4%A7%22&assignee=%22%E7%BD%91%E6%98%93%22,%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%22&status=pat">PatentGuru</a>.
+                </p>
+                <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
       <ul id="patent-list"></ul>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
           <script>
