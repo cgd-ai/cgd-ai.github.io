@@ -534,13 +534,23 @@
                 
                 <div class="project-content">
                     <div class="project-text">
-                <p><a href="https://github.com/DRL-Navigation">Open source code on GitHub</a></p>
+                <p><a class="pub-authors">Group Leader </a>, <a href="https://github.com/DRL-Navigation">Open source code on GitHub</a></p>
                 <ul>
-                    <li>DQN-based Obstacle Avoidance, <a href="https://youtu.be/Eq4AjsFH_cU">[Demo]</a></li>
-                    <li>DRQN-based 3D Obstacle Avoidance, <a href="https://youtu.be/cnCid0qOZg4">[Demo]</a></li>
-                    <li>Multi-Robot Collision Avoidance, <a href="https://youtu.be/KOb1q23L7-U">[Demo]</a></li>
-                    <li>Crowd Navigation, <a href="https://www.bilibili.com/video/BV1Vb4y1D7R6">[Demo]</a></li>
-                    <li>Crowd Navigation with Interaction Capacity</li>
+          <li>
+            <a href="pdf/ICNSC_2020_paper_11.pdf" class="bluelink"> DQN-based Obstacle Avoidance</a>, <a href="https://youtu.be/Eq4AjsFH_cU"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            <a href="pdf/IROS_2021_DRQNNav.pdf" class="bluelink"> DRQN-based 3D Obstacle Avoidance</a>, <a href="https://youtu.be/cnCid0qOZg4"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            <a href="pdf/ICTAI_2020.pdf" class="bluelink"> Multi-Robot Collision Avoidance</a>, <a href="https://youtu.be/KOb1q23L7-U"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            <a href="pdf/IROS_2021_PedNav.pdf" class="bluelink">Crowd Navigation</a>, <a href="https://www.bilibili.com/video/BV1Vb4y1D7R6"  class="bluelink">[Demo]</a>, <a href="gitstats/authors.html" class="bluelink" target="_blank"> [Code statistics] </a>
+          </li>
+          <li>
+            <a href="pdf/ICRA2022_BEEP_FINAL_06_03.pdf" class="bluelink">Crowd Navigation with Interaction Capacity</a>
+          </li>
                 </ul>
                     </div>
                     <div class="project-image">
@@ -554,13 +564,22 @@
                         <h3>Panda Robot (2020 - 2021)</h3>
                 <div class="project-content">
                     <div class="project-text">
-                        <p>Tour guide robot at the <a href="https://www.panda.org.cn/en/education/framework/2023-07-16/7850.html">Chengdu Giant Panda Museum</a>.</p>
-                        <ul>
-                            <li>Pedestrian detection and tracking, <a href="https://www.bilibili.com/video/BV1HB4y1P7xE">[Demo]</a></li>
-                            <li>Long-term robust localization, <a href="https://www.bilibili.com/video/BV1q5411w7qX">[Demo]</a></li>
-                            <li>Navigation in dense crowds, <a href="https://www.bilibili.com/video/BV13Z4y1A7br">[Brief Demo]</a>, <a href="https://www.bilibili.com/video/BV1wU4y1V7cA?share_source=copy_web">[Full Demo]</a></li>
-                            <li>Tour guide service v1.0, <a href="https://www.bilibili.com/video/BV1UM4y1u7t8">[Demo]</a></li>
-                        </ul>
+        Tour guide robot at the <a href="https://www.panda.org.cn/en/education/framework/2023-07-16/7850.html" class="bluelink">Chengdu Giant Panda Museum. </a> <br>
+        <a class="pub-authors">Group Leader, </a> (<a href="pdf/phd_cgd.pdf#page=112" class="bluelink">PhD thesis</a>, <a href="pdf/phd_cgd.pdf#page=90" class="bluelink">Ch. 4</a> and <a href="pdf/phd_cgd.pdf#page=112" class="bluelink">Ch. 5</a>)<br>
+        <ul>
+          <li>
+            Pedestrian detection and tracking, <a href="https://www.bilibili.com/video/BV1HB4y1P7xE"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            Long-term robust localization, <a href="https://www.bilibili.com/video/BV1q5411w7qX"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            Navigation in dense crowds, <a href="https://www.bilibili.com/video/BV13Z4y1A7br"  class="bluelink">[Brief Demo]</a>, <a href="https://www.bilibili.com/video/BV1wU4y1V7cA?share_source=copy_web"  class="bluelink">[Full Demo]</a>
+          </li>
+          <li>
+            <a style="color: #0066CC;"> Tour guide service v1.0</a>, <a href="https://www.bilibili.com/video/BV1UM4y1u7t8"  class="bluelink">[Demo]</a>
+          </li>
+        </ul>
                     </div>
                     <div class="project-image">
                         <img src="./pic/PandaBot.jpg" alt="Panda Robot">
@@ -634,7 +653,7 @@
                 <br>
                 - <a href="http://staff.ustc.edu.cn/~wufeng02/doc/pdf/ZCWicira17.pdf"  class="bluelink">General Batch-Calibration Framework</a>
                 <br>
-                - <a href="#ref2" class="bluelink">RGB-D Cameras Calibration [ref.3]</a>
+                - <a href="pdf/rgbd_cal_j.pdf" class="bluelink">RGB-D Cameras Calibration</a>
                 <br>
                 for Training:
                 <br>
@@ -855,93 +874,129 @@
     <a href="#" class="back-to-top">↑</a>
     
     <script>
-        // 页面导航功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const navBtns = document.querySelectorAll('.nav-btn');
-            const pageSections = document.querySelectorAll('.page-section');
-            
-            // 显示指定部分，隐藏其他部分
-            function showSection(sectionId) {
-                pageSections.forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                const targetSection = document.getElementById(sectionId);
-                if (targetSection) {
-                    targetSection.style.display = 'block';
-                }
-                
-                // 更新导航菜单激活状态
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-                
-                // 更新URL哈希（可选）
-                window.location.hash = sectionId;
-                
-                // 平滑滚动到顶部
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-            
-            // 初始显示首页
-            showSection('home');
-            
-            // 处理URL哈希变化
-            function handleHashChange() {
-                const hash = window.location.hash.substring(1);
-                if (hash && document.getElementById(hash)) {
-                    showSection(hash);
-                } else {
-                    showSection('home');
-                }
-            }
-            
-            // 监听URL哈希变化
-            window.addEventListener('hashchange', handleHashChange);
-            
-            // 导航链接点击事件
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    showSection(targetId);
-                });
-            });
-            
-            // 导航按钮点击事件
-            navBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    showSection(targetId);
-                });
-            });
-            
-            // 返回顶部按钮功能
-            const backToTopButton = document.querySelector('.back-to-top');
-            
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
-                }
-            });
-            
-            backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
+// 页面导航功能
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const pageSections = document.querySelectorAll('.page-section');
+    
+    // 状态管理变量
+    let currentSection = 'home';
+    let sectionScrollPositions = {};
+    
+    // 显示指定部分，隐藏其他部分
+    function showSection(sectionId) {
+        // 保存当前部分的滚动位置
+        sectionScrollPositions[currentSection] = window.pageYOffset;
+        
+        // 隐藏所有部分
+        pageSections.forEach(section => {
+            section.style.display = 'none';
         });
+        
+        // 显示目标部分
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+            currentSection = sectionId;
+        }
+        
+        // 更新导航菜单激活状态
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+            }
+        });
+        
+        // 恢复目标部分的滚动位置（如果有保存的话）
+        setTimeout(() => {
+            if (sectionScrollPositions[sectionId] !== undefined) {
+                window.scrollTo(0, sectionScrollPositions[sectionId]);
+            } else {
+                window.scrollTo(0, 0);
+            }
+        }, 10); // 短暂延迟确保DOM已更新
+    }
+    
+    // 处理URL哈希变化
+    function handleHashChange() {
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(hash)) {
+            showSection(hash);
+        } else {
+            showSection('home');
+        }
+    }
+    
+    // 初始显示首页
+    const initialHash = window.location.hash.substring(1);
+    if (initialHash && document.getElementById(initialHash)) {
+        showSection(initialHash);
+    } else {
+        showSection('home');
+    }
+    
+    // 监听URL哈希变化
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // 导航链接点击事件
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            
+            // 更新URL但不触发页面刷新
+            if (history.pushState) {
+                history.pushState(null, null, `#${targetId}`);
+            } else {
+                window.location.hash = `#${targetId}`;
+            }
+            
+            showSection(targetId);
+        });
+    });
+    
+    // 导航按钮点击事件
+    navBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            
+            // 更新URL但不触发页面刷新
+            if (history.pushState) {
+                history.pushState(null, null, `#${targetId}`);
+            } else {
+                window.location.hash = `#${targetId}`;
+            }
+            
+            showSection(targetId);
+        });
+    });
+    
+    // 浏览器前进/后退按钮的事件监听
+    window.addEventListener('popstate', function(e) {
+        handleHashChange();
+    });
+    
+    // 返回顶部按钮功能
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
     </script>
 </body>
 </html>
