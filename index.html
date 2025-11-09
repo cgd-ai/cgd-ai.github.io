@@ -358,6 +358,119 @@
         order: -1; /* 在小屏幕上图片显示在文字上面 */
     }
 }
+
+footer {
+    background: linear-gradient(135deg, #0d1a4c, #1a2a6c);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    border-top: 3px solid #2a3a7c;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.footer-section {
+    padding: 0 15px;
+}
+
+.footer-section h4 {
+    color: #a8d8ff;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+}
+
+/* 统计信息区域 */
+.stats-section {
+    text-align: center;
+}
+
+.flag-counter {
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.flag-counter:hover {
+    transform: scale(1.05);
+}
+
+.stats-desc {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* 资源链接区域 */
+.resource-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resource-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    padding: 5px 0;
+}
+
+.resource-links a:hover {
+    color: #a8d8ff;
+    padding-left: 8px;
+}
+
+/* 版权信息区域 */
+.copyright-section {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+
+.copyright-section p {
+    margin: 5px 0;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    footer .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .resource-links {
+        align-items: center;
+    }
+    
+    .footer-section {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 30px 0 15px;
+    }
+    
+    .footer-section h4 {
+        font-size: 1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -853,22 +966,25 @@
 
         </section>
     </main>
-    
     <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <!-- <a href="https://github.com/cgdsss" title="GitHub">GitHub</a>
-                <a href="https://scholar.google.com/citations?user=h7vRddgAAAAJ&hl=zh-CN" title="Google Scholar">Google Scholar</a>
-                <a href="https://www.linkedin.com/in/%E5%B9%BF%E5%A4%A7-%E9%99%88-1b0770109/" title="LinkedIn">LinkedIn</a>
-                <a href="https://space.bilibili.com/14005427" title="bilibili">Bilibili</a> -->
-                <a href="http://arxivdaily.com/topic/topic-detail/148" >arxivdaily.cs.RO</a>
-                <a href="https://git.ustc.edu.cn/" >USTC GitLab</a>
-                <a href="https://orcid.org/0000-0002-9502-1204">Song-Jia Yi's ORCID</a>
-            </div>
-            <p>&copy; 2025 Guangda Chen. All rights reserved.</p>
+<footer>
+    <div class="container">
+        <!-- 统计信息区域 -->
+        <div class="footer-section stats-section">
+  <a href="https://info.flagcounter.com/S8jX"><img src="https://s01.flagcounter.com/countxl/S8jX/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
         </div>
-    </footer>
+        
+        <!-- 资源链接区域 -->
+        <div class="footer-section resources-section">
+            <h4>&copy; 2025 Guangda Chen. All rights reserved.</h4>
+            <p class="footer-note">The material on this website is provided to support the timely sharing of academic and technical work. Copyright is held by the authors or other copyright holders. Anyone using this content is expected to respect the copyright terms set by the rights holders. In most cases, explicit permission is required for reposting.</p>
+            <a href="https://orcid.org/0000-0002-9502-1204"  class="fontnorm bluelink fontverysmall bb">Song-Jia Yi's ORCID</a> | <a href="old.html"  class="fontnorm bluelink fontverysmall bb">Old Website</a> | <a href="#home"  class="fontnorm bluelink fontverysmall bb">ChatGPT-formatted Website</a>
+        </div>
+        
+        <!-- 版权信息区域 -->
+
+    </div>
+</footer>
     
     <!-- 返回顶部按钮 -->
     <a href="#" class="back-to-top">↑</a>
