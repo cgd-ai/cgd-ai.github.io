@@ -471,6 +471,274 @@ footer .container {
         font-size: 1rem;
     }
 }
+
+/* Talks页面样式 - 优化版 */
+.talks-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.talk-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.talk-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.talk-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.talk-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.talk-item:hover .talk-image {
+    transform: scale(1.05);
+}
+
+.talk-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.talk-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.talk-title {
+    color: #1a2a6c;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.talk-conference {
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.talk-date {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.talk-date:before {
+    content: "📅";
+    margin-right: 5px;
+}
+
+.talk-description {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* 照片网格布局 - 保持原始比例 */
+.photos-section {
+    margin-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.photos-section h5 {
+    color: #1a2a6c;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.photos-section h5:before {
+    content: "📸";
+    margin-right: 8px;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.photo-item {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    aspect-ratio: 4/3; /* 保持统一的比例 */
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 保持原始比例，不裁剪 */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+/* 照片数量不同的布局优化 */
+.photos-grid[data-count="1"] {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+}
+
+.photos-grid[data-count="2"] {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.photos-grid[data-count="3"] {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.photos-grid[data-count="4"] {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 演讲标签颜色 */
+.talk-badge.conference {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.talk-badge.industry {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.talk-badge.invited {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.talk-badge.keynote {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .talks-gallery {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .photos-grid[data-count="1"],
+    .photos-grid[data-count="2"],
+    .photos-grid[data-count="3"],
+    .photos-grid[data-count="4"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .talk-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .photos-grid[data-count="1"],
+    .photos-grid[data-count="2"],
+    .photos-grid[data-count="3"],
+    .photos-grid[data-count="4"] {
+        grid-template-columns: 1fr;
+    }
+    
+    .talk-item {
+        margin: 0 -10px;
+        border-radius: 0;
+    }
+}
+
+/* 灯箱效果 */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: rgba(0,0,0,0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
     </style>
 </head>
 <body>
@@ -494,6 +762,7 @@ footer .container {
                 <li><a href="#about" class="nav-link">About Me</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#talks" class="nav-link">Talks</a></li>
             </ul>
         </div>
     </nav>
@@ -965,6 +1234,138 @@ footer .container {
         </div>
 
         </section>
+
+<!-- Talks部分 -->
+<section id="talks" class="page-section" style="display: none;">
+    <h2 class="section-title">Talks & Presentations</h2>
+    
+    <div class="content-section">
+        <h3>Conference Presentations</h3>
+        <p>Selected talks and presentations at academic conferences and industry events.</p>
+        
+        <div class="talks-gallery">
+            <!-- Talk 1 -->
+            <div class="talk-item">
+                <div class="talk-header">
+                    <img src="./talks/top100/1.jpg" alt="IROS 2021 Presentation" class="talk-image">
+                    <span class="talk-badge industry">Top100全球软件案例研究峰会</span>
+                </div>
+                <div class="talk-content">
+                    <h4 class="talk-title">装载机无人化破局之路：数据驱动算法的全流程深度实践</h4>
+                    <p class="talk-conference">Top100全球软件案例研究峰会</p>
+                    <p class="talk-date">November 22, 2025 | 中关村, 北京</p>
+                    <p class="talk-description">由MSUP主办的第十四届TOP100全球软件案例研究峰会（简称：TOP100 Summit）在北京圆满闭幕。本届峰会以“面向未来的组织演进与创新管理”为主题，汇聚了全球100余位技术创新者，探讨生成式AI、软硬件集成等趋势下的组织变革路径，为观众提供实用的指导和启示。大会期间，网易伏羲规控算法负责人陈博士发表了题为《装载机无人化破局之路：数据驱动算法的全流程深度实践》的演讲，系统分享了团队在装载机无人化领域的技术探索与实践经验。</p>
+                    <p class="talk-description">更多媒体报道：<a href="https://mp.weixin.qq.com/s/kNd0hAy7AWJeOC-iC4ZD2A">网易伏羲公众号</a><br>
+                    报告官方链接：<a href="https://www.top100summit.com/detail?aid=4733&id=18661">TOP100官网</a></p>
+                    <div class="photos-section">
+                        <h5>Event Photos</h5>
+                        <div class="photos-grid" data-count="3">
+                            <div class="photo-item">
+                                <img src="./talks/top100/1.jpg" alt="IROS Presentation Slide">
+                            </div>
+                            <div class="photo-item">
+                                <img src="./talks/top100/2.jpg" alt="Conference Venue">
+                            </div>
+                            <div class="photo-item">
+                                <img src="./talks/top100/3.jpg" alt="Discussion Session">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="talk-item">
+                <div class="talk-header">
+                    <img src="./talks/ICTAI/1.png" alt="ICRA 2022 Presentation" class="talk-image">
+                    <span class="talk-badge conference">International Conference</span>
+                </div>
+                <div class="talk-content">
+                    <h4 class="talk-title">Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation</h4>
+                    <p class="talk-conference">IEEE 35th International Conference onTools with Artificial Intelligence (ICTAI 2023)</p>
+                    <p class="talk-date">November 2023 | Atlanta, GA, USA</p>
+                    <p class="talk-description">The paper, "Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation," was presented at the IEEE 35th International Conference on Tools with Artificial Intelligence (ICTAI 2023). The research on human-in-the-loop automation for excavators was shared with the international community via an online presentation.</p>
+
+                    <p class="talk-description">
+                        Full Paper (PDF): <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf">paper.pdf</a><br>
+                        Demonstration Video: <a href="https://youtu.be/N6I0WZGSF68">YouTube</a>
+                    </p>
+                    
+                    <div class="photos-section">
+                        <h5>Event Photos</h5>
+                        <div class="photos-grid" data-count="2">
+                            <div class="photo-item">
+                                <img src="./talks/ICTAI/2.png" alt="ICRA Presentation">
+                            </div>
+                            <div class="photo-item">
+                                <img src="./talks/ICTAI/3.png" alt="Poster Session">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Talk 2 -->
+            <div class="talk-item">
+                <div class="talk-header">
+                    <img src="./talks/ICNSC/1.jpg" alt="ICRA 2022 Presentation" class="talk-image">
+                    <span class="talk-badge conference">International Conference</span>
+                </div>
+                <div class="talk-content">
+                    <h4 class="talk-title">Robot Navigation with Map-Based Deep Reinforcement Learning</h4>
+                    <p class="talk-conference">International Conference on Networking, Sensing, and Control (ICNSC 2020)</p>
+                    <p class="talk-date">October 2020 | Nanjing, China</p>
+                    <p class="talk-description">The paper titled "Robot Navigation with Map-Based Deep Reinforcement Learning" was presented at the ICNSC 2020. This research introduced a novel deep reinforcement learning framework for mobile robot navigation that effectively utilizes grid maps. The work was delivered through an oral presentation, highlighting its innovative approach to solving complex navigation tasks. This pioneering study laid the foundation for a series of subsequent research projects in DRL-based navigation within the research group. The significant contribution of this work was recognized with the Best Student Paper Award at the conference.</p>
+                    
+                    <div class="photos-section">
+                        <h5>Event Photos</h5>
+                        <div class="photos-grid" data-count="2">
+                            <div class="photo-item">
+                                <img src="./talks/ICNSC/2.jpg" alt="ICRA Presentation">
+                            </div>
+                            <div class="photo-item">
+                                <img src="./talks/ICNSC/3.jpg" alt="Poster Session">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Talk 4 -->
+            <!-- <div class="talk-item">
+                <div class="talk-header">
+                    <img src="./pic/talk4.jpg" alt="Academic Seminar" class="talk-image">
+                    <span class="talk-badge invited">Invited Talk</span>
+                </div>
+                <div class="talk-content">
+                    <h4 class="talk-title">From Academic Research to Industrial Applications</h4>
+                    <p class="talk-conference">Zhejiang University Robotics Seminar</p>
+                    <p class="talk-date">March 2024 | Hangzhou, China</p>
+                    <p class="talk-description">Shared experiences in transitioning robotics research from academic settings to real-world industrial applications. Discussed challenges, opportunities, and best practices for successful technology transfer.</p>
+                    
+                    <div class="photos-section">
+                        <h5>Event Photos</h5>
+                        <div class="photos-grid" data-count="2">
+                            <div class="photo-item">
+                                <img src="./pic/talk4-1.jpg" alt="Seminar Presentation">
+                            </div>
+                            <div class="photo-item">
+                                <img src="./pic/talk4-2.jpg" alt="Q&A Session">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+</section>
+
+<!-- 灯箱HTML -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
+
     </main>
     <!-- 页脚 -->
 <footer>
@@ -1111,6 +1512,47 @@ document.addEventListener('DOMContentLoaded', function() {
             top: 0,
             behavior: 'smooth'
         });
+    });
+});
+
+// 灯箱功能
+function openLightbox(imgSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imgSrc;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// 点击照片打开灯箱
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('photo-item') || e.target.parentElement.classList.contains('photo-item')) {
+            const img = e.target.tagName === 'IMG' ? e.target : e.target.querySelector('img');
+            if (img) {
+                openLightbox(img.src);
+            }
+        }
+    });
+    
+    // 点击灯箱背景关闭
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+    
+    // ESC键关闭灯箱
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
     });
 });
     </script>
