@@ -3,6 +3,8 @@ reviewers:
     url: "https://journals.sagepub.com/home/ijr"
   - name: "T-ASE"
     url: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8856"
+  - name: "RA-L"
+    url: "http://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=7083369"
   - name: "RA-M"
     url: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=100"
   - name: "Information Sciences"
