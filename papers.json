@@ -1,5 +1,16 @@
 [
   {
+    "title": "Efficient and Robust Shoveling Control System based on Semantic Elevation Mapping for Unmanned Loaders",
+    "link": "https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence",
+    "authors": "<b>Guangda Chen</b>, Zhiwen Zhang, Lin Cheng, Cheng Jin, Shunyi Yao, Yue Wang, Rong Xiong and Yingfeng Chen.",
+    "venue": "Engineering Applications of Artificial Intelligence",
+    "venueLink": "https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence",
+    "rating": "(CCF-C), (2026, <em>Accept</em>. IF: 8)",
+    "rating_link": "https://www.caa.org.cn/Uploads/image/file/20230414/20230414170847_65463.pdf#page=15",
+    "bibtex": "",
+    "abstract": ""
+  },
+  {
     "title": "Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation",
     "link": "https://ieeexplore.ieee.org/document/10356425",
     "authors": "<b>Guangda Chen</b>, Yinghao Gan, J. Chen, S. Shi, W. Chen, <a href='https://scholar.google.com/citations?user=SSBrkpMAAAAJ&hl=en'>Y. Chen</a>, <a href='https://scholar.google.com/citations?hl=en&user=1hI9bqUAAAAJ'>Rong Xiong</a> and Changjie Fan.",
@@ -31,7 +42,7 @@
     "authors": "<b>Guangda Chen</b>, Guowei Cui, Zhongxiao Jin, <a href='https://wufeng02.github.io/'>Feng Wu</a> and Xiaoping Chen.",
     "venue": "IEEE Sensors Journal",
     "venueLink": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7361",
-    "rating": "(CAA-B), (Volume: 19 , Issue: 7 , April, 1, 2019. IF: 4.5)",
+    "rating": "(CAA-B), (Volume: 19, Issue: 7, April, 1, 2019. IF: 4.5)",
     "rating_link": "https://www.caa.org.cn/Uploads/image/file/20230414/20230414170847_65463.pdf#page=15",
     "bibtex": "@Article{chen2019accurate,\n title = {Accurate Intrinsic and Extrinsic Calibration of {RGB}-D Cameras With {GP}-Based Depth Correction},\n author = {Guangda Chen and Guowei Cui and Zhongxiao Jin and Feng Wu and Xiaoping Chen},\n journal = {IEEE Sensors Journal},\n volume = {19},\n number = {7},\n pages = {2685--2694},\n year = 2019,\n month = {apr},\n publisher = {IEEE},\n doi = {10.1109/jsen.2018.2889805},\n url = {https://doi.org/10.1109%2Fjsen.2018.2889805}\n}",
     "abstract": "In recent years, more and more robots have been equipped with low-cost RGB-D sensors, such as Microsoft Kinect and Intel Realsense, for safe navigation and active interaction with objects and people. In order to obtain more accurate and reliable fused color and depth information (coloured point clouds), not only the intrinsic and extrinsic parameters of color and depth sensor should be precisely calibrated, but also the external corrections of depth measurements are required. In this paper, using motion capture system, we propose a reliable calibration framework that enables the precise estimation of the intrinsic and extrinsic parameters of RGB-D sensors and provide a model-free depth calibration method based on heteroscedastic Gaussian Processes. Compared with the existing depth correction techniques, our method can simultaneously estimate the mean and variance of the depth error at different measurement distances, i.e., the probability distribution of the depth error relative to the measured distance, which is essential in the state estimation problems. To verify the effectiveness of our approach, we conduct a thorough qualitative and quantitative analysis of the major steps of our calibration method, and compare our experimental results with other related work. Furthermore, we demonstrate an experiment about the overall improvement of visual SLAM with a Kinect device calibrated by our calibration technique.",
