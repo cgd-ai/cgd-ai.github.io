@@ -84,17 +84,15 @@
             <div class="content-section">
                 <h3>Biography</h3>
                  Dr. Guangda Chen is currently working as a Senior Robot Engineer at <a href="https://fuxi.163.com/"  class="bluelink">Fuxi Robotics in NetEase</a>.
-        And he is also a postdoctoral researcher at the College of Control Science and Engineering, <a href="https://www.zju.edu.cn/"  class="bluelink">Zhejiang University</a>
-        (advised by Prof. <a href="https://person.zju.edu.cn/0097062"  class="bluelink">Rong Xiong</a>).
-        He received his Ph.D. degree in Computer Science from 
-      <a href="https://www.ustc.edu.cn/" class="bluelink" >University of Science and Technology of China </a> in 2021 
-      (BA17011, advised by Prof. 
-      <a href="https://cs.ustc.edu.cn/2020/0828/c23235a460075/pagem.htm"  class="bluelink">Xiaoping Chen</a> in the 
+        He received his Ph.D. degree in Computer Science from
+      <a href="https://www.ustc.edu.cn/" class="bluelink" >University of Science and Technology of China </a> in 2021
+      (BA17011, advised by Prof.
+      <a href="https://cs.ustc.edu.cn/2020/0828/c23235a460075/pagem.htm"  class="bluelink">Xiaoping Chen</a> in the
       <a href="http://ai.ustc.edu.cn/" class="bluelink" >USTC Robotics Laboratory</a>).
-      Before joining USTC Robotics Lab in 2015, 
-      he received a Bachelor of Administration from <a href="http://www.cmu.edu.cn/"  class="bluelink">China Medical 
-        University</a> in 2014. 
-        As a graduate student, he focused on researching mobile robot navigation in dynamic and crowded environments. 
+      Before joining USTC Robotics Lab in 2015,
+      he received a Bachelor of Administration from <a href="http://www.cmu.edu.cn/"  class="bluelink">China Medical
+        University</a> in 2014.
+        As a graduate student, he focused on researching mobile robot navigation in dynamic and crowded environments.
         Currently, he is dedicated to developing and applying innovative automation and intelligent technologies in heavy construction machinery.
       <br><br>
       Find him on:
@@ -379,6 +377,7 @@
                             <p class="paper-authors">${paper.authors}</p>
                             <p class="paper-venue">
                                 <i><a href="${paper.venueLink}" class="bluelink">${paper.venue}</a></i>
+                                ${paper.impact_factor ? `<span class="paper-if">IF: ${paper.impact_factor}</span>` : ''}
                                 ${paper.rating ? `<span class="paper-rating"><a href="${paper.rating_link}" class="bluelink">${paper.rating}</a></span>` : ''}
                                 ${paper.award ? `<span class="paper-award">${paper.award}</span>` : ''}
                             </p>

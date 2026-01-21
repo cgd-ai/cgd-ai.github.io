@@ -383,16 +383,121 @@ footer {
 }
 
 .paper-venue {
-    color: #555;
-    font-size: 0.85rem;
+    color: #333;
+    font-size: 0.95rem;
     margin-bottom: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.paper-venue i {
+    font-style: normal;
+    font-weight: 700;
+    color: #1a2a6c;
+    font-size: 1rem;
+}
+
+/* 期刊标识 - 只有英文字母的是期刊 */
+.paper-venue i a[href*="journal"]::before,
+.paper-venue i a[href*="ieee.org/xpl/RecentIssue"]::before,
+.paper-venue i a[href*="springer.com/journal"]::before,
+.paper-venue i a[href*="mdpi.com/journal"]::before,
+.paper-venue i a[href*="sciencedirect.com/journal"]::before {
+    content: "📄 ";
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+/* 为期刊链接添加特殊样式 */
+.paper-venue i a[href*="journal"],
+.paper-venue i a[href*="ieee.org/xpl/RecentIssue"],
+.paper-venue i a[href*="springer.com/journal"],
+.paper-venue i a[href*="mdpi.com/journal"],
+.paper-venue i a[href*="sciencedirect.com/journal"] {
+    color: #c0392b;
+    background: linear-gradient(to right, transparent, rgba(192, 57, 43, 0.05), transparent);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.paper-venue i a[href*="journal"]:hover,
+.paper-venue i a[href*="ieee.org/xpl/RecentIssue"]:hover,
+.paper-venue i a[href*="springer.com/journal"]:hover,
+.paper-venue i a[href*="mdpi.com/journal"]:hover,
+.paper-venue i a[href*="sciencedirect.com/journal"]:hover {
+    color: #a02818;
+    background: linear-gradient(to right, transparent, rgba(192, 57, 43, 0.1), transparent);
+}
+
+/* 学位论文标识 - USTC学位论文 */
+.paper-venue i a[href*="ustc.edu.cn"]::before {
+    content: "🎓 ";
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+.paper-venue i a[href*="ustc.edu.cn"] {
+    color: #8e44ad;
+    background: linear-gradient(to right, transparent, rgba(142, 68, 173, 0.05), transparent);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.paper-venue i a[href*="ustc.edu.cn"]:hover {
+    color: #6c3483;
+    background: linear-gradient(to right, transparent, rgba(142, 68, 173, 0.1), transparent);
+}
+
+/* 会议标识 - 英文字母+年份数字的是会议 */
+.paper-venue i a:not([href*="journal"]):not([href*="ieee.org/xpl/RecentIssue"]):not([href*="springer.com/journal"]):not([href*="mdpi.com/journal"]):not([href*="sciencedirect.com/journal"]):not([href*="ustc.edu.cn"])::before {
+    content: "🏛️ ";
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+/* 为会议链接添加特殊样式 */
+.paper-venue i a:not([href*="journal"]):not([href*="ieee.org/xpl/RecentIssue"]):not([href*="springer.com/journal"]):not([href*="mdpi.com/journal"]):not([href*="sciencedirect.com/journal"]):not([href*="ustc.edu.cn"]) {
+    color: #2c7aa0;
+    background: linear-gradient(to right, transparent, rgba(44, 122, 160, 0.05), transparent);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.paper-venue i a:not([href*="journal"]):not([href*="ieee.org/xpl/RecentIssue"]):not([href*="springer.com/journal"]):not([href*="mdpi.com/journal"]):not([href*="sciencedirect.com/journal"]):not([href*="ustc.edu.cn"]):hover {
+    color: #1f5a7a;
+    background: linear-gradient(to right, transparent, rgba(44, 122, 160, 0.1), transparent);
+}
+
+.paper-venue i a {
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.paper-venue i a:hover {
+    text-decoration: underline;
+}
+
+.paper-if {
+    display: inline-block;
+    background: linear-gradient(135deg, #27ae60, #229954);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-left: 0;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .paper-rating {
-    margin-left: 8px;
-    color: #e67e22;
+    margin-left: 0;
+    color: #d35400;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
 }
 
 .paper-award {
@@ -502,6 +607,14 @@ footer {
 
     .paper-title {
         font-size: 0.95rem;
+    }
+
+    .paper-venue {
+        font-size: 0.88rem;
+    }
+
+    .paper-venue i {
+        font-size: 0.92rem;
     }
 
     .paper-links {
