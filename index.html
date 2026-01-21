@@ -679,25 +679,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 状态管理变量
     let currentSection = 'home';
-    let sectionScrollPositions = {};
     
     // 显示指定部分，隐藏其他部分
-    function showSection(sectionId) {
-        // 保存当前部分的滚动位置
-        sectionScrollPositions[currentSection] = window.pageYOffset;
-        
+    function showSection(sectionId, scrollToTop = true) {
         // 隐藏所有部分
         pageSections.forEach(section => {
             section.style.display = 'none';
         });
-        
+
         // 显示目标部分
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             targetSection.style.display = 'block';
             currentSection = sectionId;
         }
-        
+
         // 更新导航菜单激活状态
         navLinks.forEach(link => {
             link.classList.remove('active');
@@ -705,15 +701,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('active');
             }
         });
-        
-        // 恢复目标部分的滚动位置（如果有保存的话）
-        setTimeout(() => {
-            if (sectionScrollPositions[sectionId] !== undefined) {
-                window.scrollTo(0, sectionScrollPositions[sectionId]);
-            } else {
-                window.scrollTo(0, 0);
-            }
-        }, 10); // 短暂延迟确保DOM已更新
+
+        // 根据参数决定是否滚动
+        if (scrollToTop) {
+            setTimeout(() => {
+                if (sectionId === 'home') {
+                    // Home页面滚动到网站最顶部（包括header）
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // 其他页面滚动到导航栏位置
+                    const nav = document.querySelector('nav');
+                    if (nav) {
+                        const navTop = nav.offsetTop;
+                        window.scrollTo({
+                            top: navTop,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }, 10); // 短暂延迟确保DOM已更新
+        }
     }
     
     // 处理URL哈希变化
@@ -731,7 +746,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (initialHash && document.getElementById(initialHash)) {
         showSection(initialHash);
     } else {
-        showSection('home');
+        showSection('home', false); // 首次加载home页面时不滚动
     }
     
     // 监听URL哈希变化
