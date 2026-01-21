@@ -6,740 +6,7 @@
     <title>Guangda Chen - Personal Website</title>
     <link rel="shortcut icon" href="favicon.png"/>
     <link rel="stylesheet" type="text/css" href="main.css" id="css">
-    <style>
-        /* 基础样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* 头部样式 */
-        header {
-            background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-        
-        /* 导航菜单 */
-        nav {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-        
-        .nav-menu li {
-            margin: 0;
-        }
-        
-        .nav-menu a {
-            display: block;
-            padding: 15px 25px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-        
-        .nav-menu a:hover {
-            background-color: #f0f8ff;
-            color: #1a2a6c;
-            border-bottom: 3px solid #1a2a6c;
-        }
-        
-        .nav-menu a.active {
-            background-color: #f0f8ff;
-            color: #1a2a6c;
-            border-bottom: 3px solid #1a2a6c;
-        }
-        
-        /* 主要内容区域 */
-        main {
-            padding: 40px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #1a2a6c;
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #1a2a6c;
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-        
-        /* 卡片布局 */
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        
-        .card h3 {
-            color: #1a2a6c;
-            margin-top: 0;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eaeaea;
-        }
-        
-        .card p {
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            align-self: flex-start;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: inherit;
-        }
-        
-        .btn:hover {
-            background: linear-gradient(135deg, #2a3a7c, #3a4a8c);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        /* 内容部分样式 */
-        .content-section {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .content-section h2 {
-            color: #1a2a6c;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eaeaea;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: #1a2a6c;
-            border-radius: 2px;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-        }
-        
-        .timeline-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: -38px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background: #1a2a6c;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px #1a2a6c;
-        }
-        
-        .timeline-date {
-            font-weight: 600;
-            color: #1a2a6c;
-            margin-bottom: 5px;
-        }
-        
-        /* 页脚 */
-        footer {
-            background-color: #1a2a6c;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
-        }
-        
-        .social-links {
-            margin-bottom: 20px;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-            color: white;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: #a8d8ff;
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .nav-menu {
-                flex-direction: column;
-            }
-            
-            .nav-menu a {
-                text-align: center;
-                border-bottom: 1px solid #eee;
-                border-left: 3px solid transparent;
-            }
-            
-            .nav-menu a.active,
-            .nav-menu a:hover {
-                border-left: 3px solid #1a2a6c;
-                border-bottom: 1px solid #eee;
-            }
-            
-            .card-container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
-        
-        /* 返回顶部按钮 */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #1a5c6c;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 99;
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-        }
-        
-        .back-to-top:hover {
-            background: #2a3a7c;
-            transform: translateY(-3px);
-        }
-
-/* Projects页面布局样式 */
-.project-content {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-.project-text {
-    flex: 1;
-}
-
-.project-image {
-    flex: 0 0 280px;
-    text-align: center;
-}
-
-.project-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .project-content {
-        flex-direction: column;
-    }
-    
-    .project-image {
-        flex: none;
-        width: 100%;
-        order: -1; /* 在小屏幕上图片显示在文字上面 */
-    }
-}
-
-footer {
-    background: linear-gradient(135deg, #0d1a4c, #1a2a6c);
-    color: white;
-    padding: 40px 0 20px;
-    margin-top: 50px;
-    border-top: 3px solid #2a3a7c;
-}
-
-footer .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    align-items: start;
-}
-
-.footer-section {
-    padding: 0 15px;
-}
-
-.footer-section h4 {
-    color: #a8d8ff;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 8px;
-}
-
-/* 统计信息区域 */
-.stats-section {
-    text-align: center;
-}
-
-.flag-counter {
-    display: inline-block;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.flag-counter:hover {
-    transform: scale(1.05);
-}
-
-.stats-desc {
-    font-size: 0.85rem;
-    opacity: 0.8;
-    margin-top: 5px;
-}
-
-/* 资源链接区域 */
-.resource-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.resource-links a {
-    color: #e0e0e0;
-    text-decoration: none;
-    transition: color 0.3s ease, padding-left 0.3s ease;
-    padding: 5px 0;
-}
-
-.resource-links a:hover {
-    color: #a8d8ff;
-    padding-left: 8px;
-}
-
-/* 版权信息区域 */
-.copyright-section {
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-    grid-column: 1 / -1;
-    margin-top: 20px;
-}
-
-.copyright-section p {
-    margin: 5px 0;
-}
-
-.footer-note {
-    font-size: 0.85rem;
-    opacity: 0.7;
-    font-style: italic;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    footer .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 25px;
-    }
-    
-    .resource-links {
-        align-items: center;
-    }
-    
-    .footer-section {
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    footer {
-        padding: 30px 0 15px;
-    }
-    
-    .footer-section h4 {
-        font-size: 1rem;
-    }
-}
-
-/* Talks页面样式 - 优化版 */
-.talks-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.talk-item {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.talk-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.talk-header {
-    position: relative;
-    overflow: hidden;
-}
-
-.talk-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.talk-item:hover .talk-image {
-    transform: scale(1.05);
-}
-
-.talk-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.talk-content {
-    padding: 25px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.talk-title {
-    color: #1a2a6c;
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-    line-height: 1.4;
-    font-weight: 600;
-}
-
-.talk-conference {
-    color: #2c3e50;
-    font-weight: 500;
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-}
-
-.talk-date {
-    color: #7f8c8d;
-    font-size: 0.85rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.talk-date:before {
-    content: "📅";
-    margin-right: 5px;
-}
-
-.talk-description {
-    color: #555;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
-
-/* 照片网格布局 - 保持原始比例 */
-.photos-section {
-    margin-top: 20px;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 20px;
-}
-
-.photos-section h5 {
-    color: #1a2a6c;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.photos-section h5:before {
-    content: "📸";
-    margin-right: 8px;
-}
-
-.photos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 12px;
-}
-
-.photo-item {
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    aspect-ratio: 4/3; /* 保持统一的比例 */
-    background: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.photo-item:hover {
-    transform: scale(1.08);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* 保持原始比例，不裁剪 */
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.photo-item:hover img {
-    transform: scale(1.1);
-}
-
-/* 照片数量不同的布局优化 */
-.photos-grid[data-count="1"] {
-    grid-template-columns: 1fr;
-    max-width: 300px;
-}
-
-.photos-grid[data-count="2"] {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.photos-grid[data-count="3"] {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.photos-grid[data-count="4"] {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-/* 演讲标签颜色 */
-.talk-badge.conference {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
-}
-
-.talk-badge.industry {
-    background: linear-gradient(135deg, #27ae60, #229954);
-}
-
-.talk-badge.invited {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
-}
-
-.talk-badge.keynote {
-    background: linear-gradient(135deg, #f39c12, #e67e22);
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .talks-gallery {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    .photos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    
-    .photos-grid[data-count="1"],
-    .photos-grid[data-count="2"],
-    .photos-grid[data-count="3"],
-    .photos-grid[data-count="4"] {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .talk-content {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .photos-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .photos-grid[data-count="1"],
-    .photos-grid[data-count="2"],
-    .photos-grid[data-count="3"],
-    .photos-grid[data-count="4"] {
-        grid-template-columns: 1fr;
-    }
-    
-    .talk-item {
-        margin: 0 -10px;
-        border-radius: 0;
-    }
-}
-
-/* 灯箱效果 */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox.active {
-    display: flex;
-}
-
-.lightbox-img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    background: rgba(0,0,0,0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <!-- 头部 -->
@@ -1088,54 +355,51 @@ footer .container {
                 renderPapers(papers);
             })
             .catch(error => {
-                document.getElementById('papers-container').innerHTML = 
+                document.getElementById('papers-container').innerHTML =
                     `<div class="error">加载论文数据时出错: ${error.message}</div>`;
             });
 
         // 渲染论文列表
         function renderPapers(papers) {
             const container = document.getElementById('papers-container');
-            
+
             if (!papers || papers.length === 0) {
                 container.innerHTML = '<div class="error">没有找到论文数据</div>';
                 return;
             }
-            
-            // let html = '<ol>';
+
             let html = '';
-            
-            papers.forEach((paper, index) => { 
+
+            papers.forEach((paper, index) => {
                 keywords_text = `${paper.keywords ? `<br><b>Keywords:</b> ${paper.keywords} ` : ''}`;
                 html += `
-                        <div class="linebigheight" align="left" id="ref${index}">
-                            <h4><a href="${paper.link}" class="fontnorm bluelink">${paper.title}</a></h4>
-                            ${paper.sub_title ? `<a href="${paper.link}" class="fontnorm bluelink">${paper.sub_title}</a><br>` : ''}
-                            <span class="pub-authors">${paper.authors}</span>
-                            
-                            <br>
-                            <i><a href="${paper.venueLink}" class="bluelink pub-venue">${paper.venue}</a></i>
-                            ${paper.rating ? `<a href="${paper.rating_link}" class="fontnorm bluelink">${paper.rating}</a>` : ''}
-                            ${paper.award ? `<b> <span class="award">${paper.award}</span></b>` : ''}
-                            <br>
-                            <a class="bluelink" onclick="toggleDisplay('bib${index}')">[BibTeX]</a>,
-                            ${paper.abstract ? `<a class="bluelink" onclick="toggleDisplay('abs${index}')">[Abstract]</a>,` : ''}
-                            ${paper.pdf ? `<a href="${paper.pdf}" class="bluelink">[PDF]</a>,` : ''}
-                            ${paper.pdf2 ? `<a href="${paper.pdf2}" class="bluelink">[PDF2]</a>,` : ''}
-                            ${paper.demo ? `<a href="${paper.demo}" class="bluelink">[Demo]</a>,` : ''}
-                            ${paper.slides ? `<a href="${paper.slides}" class="bluelink">[Slides]</a>,` : ''}
-                            ${paper.awardDoc ? `<a href="${paper.awardDoc}" class="bluelink">[Award]</a>,` : ''}
-                            ${paper.youTube ? `<a href="${paper.youTube}" class="bluelink">[YouTube]</a>,` : ''}
-                            ${paper.bili1 ? `<a href="${paper.bili1}" class="bluelink">[bili_1]</a>,` : ''}
-                            ${paper.bili2 ? `<a href="${paper.bili2}" class="bluelink">[bili_2]</a>` : ''}
-                            ${(paper.bili1 || paper.bili2) && !paper.bili2 ? '' : ''}
-                            <div id="bib${index}" style="display:none" class="bibtexdiv">${paper.bibtex}</div>
-                            ${paper.abstract ? `<div id="abs${index}" style="display:none" class="bibtexdiv"><b>Abstract:</b> ${paper.abstract} ${keywords_text}</div>` : ''}
+                        <div class="publication-item" id="ref${index}">
+                            <h4 class="paper-title"><a href="${paper.link}" class="bluelink">${paper.title}</a></h4>
+                            ${paper.sub_title ? `<p class="paper-subtitle"><a href="${paper.link}" class="bluelink">${paper.sub_title}</a></p>` : ''}
+                            <p class="paper-authors">${paper.authors}</p>
+                            <p class="paper-venue">
+                                <i><a href="${paper.venueLink}" class="bluelink">${paper.venue}</a></i>
+                                ${paper.rating ? `<span class="paper-rating"><a href="${paper.rating_link}" class="bluelink">${paper.rating}</a></span>` : ''}
+                                ${paper.award ? `<span class="paper-award">${paper.award}</span>` : ''}
+                            </p>
+                            <div class="paper-links">
+                                <a class="paper-link" onclick="toggleDisplay('bib${index}')">BibTeX</a>
+                                ${paper.abstract ? `<a class="paper-link" onclick="toggleDisplay('abs${index}')">Abstract</a>` : ''}
+                                ${paper.pdf ? `<a href="${paper.pdf}" class="paper-link">PDF</a>` : ''}
+                                ${paper.pdf2 ? `<a href="${paper.pdf2}" class="paper-link">PDF2</a>` : ''}
+                                ${paper.demo ? `<a href="${paper.demo}" class="paper-link">Demo</a>` : ''}
+                                ${paper.slides ? `<a href="${paper.slides}" class="paper-link">Slides</a>` : ''}
+                                ${paper.awardDoc ? `<a href="${paper.awardDoc}" class="paper-link">Award</a>` : ''}
+                                ${paper.youTube ? `<a href="${paper.youTube}" class="paper-link">YouTube</a>` : ''}
+                                ${paper.bili1 ? `<a href="${paper.bili1}" class="paper-link">Bilibili</a>` : ''}
+                                ${paper.bili2 ? `<a href="${paper.bili2}" class="paper-link">Bilibili_2</a>` : ''}
+                            </div>
+                            <div id="bib${index}" class="paper-collapsible" style="display:none">${paper.bibtex}</div>
+                            ${paper.abstract ? `<div id="abs${index}" class="paper-collapsible" style="display:none"><b>Abstract:</b> ${paper.abstract} ${keywords_text}</div>` : ''}
                         </div>
-                    <hr>
                 `;
             });
-            
-            // html += '</ol>';
+
             container.innerHTML = html;
         }
 
@@ -1173,11 +437,11 @@ footer .container {
             
             <div class="content-section">
                 <h3>Granted Patents</h3>
-                      <p>All patents: 
+                      <p>All patents:
                     <a href="https://www.patentguru.com/cn/search?inventor=%22%E9%99%88%E5%B9%BF%E5%A4%A7%22&assignee=%22%E7%BD%91%E6%98%93%22,%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%22&SortBy=pubdate_newest">PatentGuru</a>.
                 </p>
                 <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
-      <ul id="patent-list"></ul>
+      <div id="patent-list" class="patent-list"></div>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
           <script>
               fetch('patents.yaml')
@@ -1185,54 +449,69 @@ footer .container {
                   .then(text => {
                       const data = jsyaml.load(text);
                       const patentList = document.getElementById('patent-list');
-                      data.patents.forEach(patent => {
-                          const listItem = document.createElement('li');
+                      data.patents.forEach((patent, index) => {
+                          const patentItem = document.createElement('div');
+                          patentItem.className = 'patent-item';
                           let awardHtml = '';
                           if (patent.url === 'https://www.patentguru.com/cn/CN117950401B') {
-                            awardHtml = "<a class='award'>NetEase\'s Top 10 Patents (2025)</a>";
+                            awardHtml = "<span class='paper-award'>NetEase's Top 10 Patents (2025)</span>";
                           }
-                          listItem.innerHTML = `
-                              <div class="linebigheight" align="left">
-                                  <a href="${patent.url}" class="fontnorm bluelink">${patent.title}</a> ${awardHtml}
+                          patentItem.innerHTML = `
+                              <div class="patent-number">${index + 1}.</div>
+                              <div class="patent-content">
+                                  <a href="${patent.url}" class="patent-title bluelink">${patent.title}</a>
+                                  ${awardHtml}
                               </div>
                           `;
-                          patentList.appendChild(listItem);
+                          patentList.appendChild(patentItem);
                       });
                   })
                   .catch(error => console.error('Error loading YAML file:', error));
           </script>
             </div>
 
-        <div class="content-section">
-                  <p>
-      Conference reviewer : 
-      <a href="https://www.iros2019.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2019</a>, 
-      <a href="http://www.icra2021.org/"  class="fontnorm bluelink fontverysmall bb"> ICRA 2021</a>,  
-      <a href="http://ieeesmc2021.org/"  class="fontnorm bluelink fontverysmall bb"> SMC 2021</a>, 
-      <a href="https://www.icra2022.org/"  class="fontnorm bluelink fontverysmall bb"> ICRA 2022</a>, 
-      <a href="https://iros2022.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2022</a>, 
-      <a href="https://www.icra2023.org/"  class="fontnorm bluelink fontverysmall bb"> ICRA 2023</a>, 
-      <a href="https://ieee-iros.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2023</a>, 
-      <a href="https://2025.ieeecase.org/"  class="fontnorm bluelink fontverysmall bb"> CASE 2025</a>, 
-      <a href="https://www.iros25.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2025</a>, 
-      <a href="https://2026.ieee-icra.org/"  class="fontnorm bluelink fontverysmall bb"> ICRA 2026</a>
-      <br>
-      </p>
-      <div id="reviewers"></div>
-      <script>
-        async function loadYAML() {
-            const response = await fetch('reviewers.yaml');
-            const yamlText = await response.text();
-            const data = jsyaml.load(yamlText);
+        <div class="content-section reviewer-section">
+            <h3>Academic Service</h3>
 
-            const reviewersDiv = document.getElementById('reviewers');
-            const reviewerLinks = data.reviewers.map(reviewer => {
-                return `<a href="${reviewer.url}" class="fontnorm bluelink fontverysmall bb">${reviewer.name}</a>`;
-            });
-            reviewersDiv.innerHTML = "Journal reviewer : " + reviewerLinks.join(', ');
-        }
-        loadYAML().catch(console.error);
-    </script>
+            <div class="reviewer-category">
+                <p class="reviewer-label">Conference Reviewer:</p>
+                <div class="reviewer-tags">
+                    <a href="https://www.iros2019.org/" class="bluelink bb">IROS 2019</a>
+                    <a href="http://www.icra2021.org/" class="bluelink bb">ICRA 2021</a>
+                    <a href="http://ieeesmc2021.org/" class="bluelink bb">SMC 2021</a>
+                    <a href="https://www.icra2022.org/" class="bluelink bb">ICRA 2022</a>
+                    <a href="https://iros2022.org/" class="bluelink bb">IROS 2022</a>
+                    <a href="https://www.icra2023.org/" class="bluelink bb">ICRA 2023</a>
+                    <a href="https://ieee-iros.org/" class="bluelink bb">IROS 2023</a>
+                    <a href="https://2025.ieeecase.org/" class="bluelink bb">CASE 2025</a>
+                    <a href="https://www.iros25.org/" class="bluelink bb">IROS 2025</a>
+                    <a href="https://2026.ieee-icra.org/" class="bluelink bb">ICRA 2026</a>
+                </div>
+            </div>
+
+            <div class="reviewer-category">
+                <p class="reviewer-label">Journal Reviewer:</p>
+                <div id="reviewers" class="reviewer-tags"></div>
+            </div>
+
+            <script>
+                async function loadYAML() {
+                    try {
+                        const response = await fetch('reviewers.yaml');
+                        const yamlText = await response.text();
+                        const data = jsyaml.load(yamlText);
+
+                        const reviewersDiv = document.getElementById('reviewers');
+                        const reviewerLinks = data.reviewers.map(reviewer => {
+                            return `<a href="${reviewer.url}" class="bluelink bb">${reviewer.name}</a>`;
+                        });
+                        reviewersDiv.innerHTML = reviewerLinks.join('');
+                    } catch (error) {
+                        console.error('Error loading reviewers:', error);
+                    }
+                }
+                loadYAML();
+            </script>
         </div>
 
         </section>
