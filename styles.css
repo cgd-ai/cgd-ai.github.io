@@ -542,12 +542,16 @@ footer {
 .paper-collapsible {
     margin-top: 10px;
     padding: 12px;
-    background: #ffffff;
+    background: #f8f9fa;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     font-size: 0.85rem;
-    line-height: 1.5;
+    line-height: 1.8;
     color: #333;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
 }
 
 /* Patents页面样式优化 */
