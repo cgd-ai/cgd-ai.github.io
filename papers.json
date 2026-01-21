@@ -1,15 +1,18 @@
 [
   {
     "title": "Efficient and Robust Shoveling Control System based on Semantic Elevation Mapping for Unmanned Loaders",
-    "link": "https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence",
+    "link": "https://doi.org/10.1016/j.engappai.2026.113908",
     "authors": "<b>Guangda Chen</b>, Zhiwen Zhang, Lin Cheng, Cheng Jin, Shunyi Yao, Yue Wang, Rong Xiong and Yingfeng Chen.",
     "venue": "Engineering Applications of Artificial Intelligence",
     "venueLink": "https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence",
     "rating": "(CCF-C), (2026, <em>Accept</em>)",
     "impact_factor": "8.0",
     "rating_link": "https://ccf.atom.im/",
-    "bibtex": "",
-    "abstract": ""
+    "bibtex": "@article{CHEN2026113908,\n  title = {Efficient and Robust Shoveling Control System Based on Semantic Elevation Mapping for Unmanned Loaders},\n  author = {Guangda Chen and Zhiwen Zhang and Lin Cheng and Cheng Jin and Shunyi Yao and Yue Wang and Rong Xiong and Yingfeng Chen},\n  journal = {Engineering Applications of Artificial Intelligence},\n  volume = {167},\n  pages = {113908},\n  year = {2026},\n  issn = {0952-1976},\n  doi = {10.1016/j.engappai.2026.113908},\n  url = {https://www.sciencedirect.com/science/article/pii/S0952197626001892}\n}",
+    "abstract": "Improving the automation of wheeled loaders is key to solving labor gaps and boosting safety in construction. This paper proposes an automatic shoveling system for unmanned loaders that, for the first time, balances safety, robustness, efficiency, and energy consumption. The system features automatic calibration of camera and light detection and ranging (LiDAR) using large segmentation models and nonlinear optimization, ensuring stability despite vibrations. A lightweight neural network performs semantic segmentation, and multi-frame point clouds are fused with a confidence algorithm for accurate pile segmentation. The shoveling point selection algorithm integrates semantic and elevation data to prioritize loader and environmental safety. Volume prediction initiates scooping, and a shoveling strategy balances robustness and efficiency. Extensive field tests conducted over two months with two types of loaders in three scenarios, totaling 2090 operations, demonstrate the system's long-term stability, high bucket full rates, efficiency matching manual operations, and an 11% reduction in energy consumption. These results highlight the system's potential to transform automated construction machinery.",
+    "keywords": "Wheel loader, Shoveling control, Semantic segmentation, Elevation mapping, Calibration, Shoveling point selection",
+    "pdf": "pdf/1-s2.0-S0952197626001892-main.pdf",
+    "demo": "https://youtu.be/uHHbI35hjsY"
   },
   {
     "title": "Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation",
