@@ -648,7 +648,7 @@ footer {
 /* Projects页面布局样式 */
 .project-content {
     display: flex;
-    gap: 30px;
+    gap: 24px;
     align-items: flex-start;
 }
 
@@ -656,28 +656,121 @@ footer {
     flex: 1;
 }
 
+.project-text h3 {
+    color: #1a2a6c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.project-text p {
+    color: #555;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 6px 0 12px 0;
+}
+
+.project-text ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.project-text ul li {
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+
+.project-text ul li a {
+    color: #0066CC;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-text ul li a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+.project-text table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.88rem;
+}
+
+.project-text table th {
+    background-color: #f5f7fa;
+    color: #1a2a6c;
+    font-weight: 600;
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.project-text table td {
+    padding: 7px 10px;
+    border: 1px solid #e0e0e0;
+    color: #555;
+}
+
+.project-text table td a {
+    color: #0066CC;
+}
+
 .project-image {
-    flex: 0 0 280px;
+    flex: 0 0 260px;
     text-align: center;
 }
 
 .project-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* 优化Projects页面的content-section间距 */
+#projects .content-section {
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+#projects .content-section h3 {
+    color: #1a2a6c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 /* 响应式设计 - Projects */
 @media (max-width: 768px) {
     .project-content {
         flex-direction: column;
+        gap: 16px;
     }
 
     .project-image {
         flex: none;
         width: 100%;
         order: -1;
+    }
+
+    #projects .content-section {
+        padding: 16px 18px;
+        margin-bottom: 16px;
+    }
+
+    .project-text h3 {
+        font-size: 1rem;
+    }
+
+    .project-text p,
+    .project-text ul li {
+        font-size: 0.88rem;
     }
 }
 
