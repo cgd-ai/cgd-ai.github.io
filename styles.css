@@ -665,7 +665,7 @@ footer {
 }
 
 .project-text p {
-    color: #555;
+    color: #333;
     font-size: 0.92rem;
     line-height: 1.6;
     margin: 6px 0 12px 0;
@@ -691,7 +691,6 @@ footer {
 
 .project-text ul li a:hover {
     color: #004499;
-    text-decoration: underline;
 }
 
 .project-text table {
@@ -718,6 +717,37 @@ footer {
 
 .project-text table td a {
     color: #0066CC;
+}
+
+/* Kejia Robot 表格特殊样式 - 更紧凑 */
+.project-text .kejia-table {
+    max-width: 650px;
+    font-size: 0.86rem;
+}
+
+.project-text .kejia-table th,
+.project-text .kejia-table td {
+    padding: 6px 8px;
+}
+
+.project-text .kejia-table th:nth-child(1),
+.project-text .kejia-table td:nth-child(1) {
+    width: 42%;
+}
+
+.project-text .kejia-table th:nth-child(2),
+.project-text .kejia-table td:nth-child(2) {
+    width: 20%;
+}
+
+.project-text .kejia-table th:nth-child(3),
+.project-text .kejia-table td:nth-child(3) {
+    width: 26%;
+}
+
+.project-text .kejia-table th:nth-child(4),
+.project-text .kejia-table td:nth-child(4) {
+    width: 12%;
 }
 
 .project-image {
