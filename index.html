@@ -24,6 +24,11 @@
     <!-- 导航菜单 -->
     <nav>
         <div class="container">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home" class="active nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About Me</a></li>
@@ -757,30 +762,43 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
-            
+
+            // 关闭移动端菜单
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.remove('active');
+
             // 更新URL但不触发页面刷新
             if (history.pushState) {
                 history.pushState(null, null, `#${targetId}`);
             } else {
                 window.location.hash = `#${targetId}`;
             }
-            
+
             showSection(targetId);
         });
     });
-    
+
+    // 移动端菜单切换
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        this.classList.toggle('active');
+    });
+
     // 导航按钮点击事件
     navBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const targetId = this.getAttribute('data-target');
-            
+
             // 更新URL但不触发页面刷新
             if (history.pushState) {
                 history.pushState(null, null, `#${targetId}`);
             } else {
                 window.location.hash = `#${targetId}`;
             }
-            
+
             showSection(targetId);
         });
     });
