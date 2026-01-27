@@ -446,16 +446,32 @@
                 </p>
                 <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
       <div id="patent-list" class="patent-list"></div>
+          <button id="patent-toggle-btn" class="show-more-btn" style="display: none;">
+              Show More (<span id="hidden-patent-count"></span>)
+          </button>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
           <script>
+              const INITIAL_PATENT_COUNT = 5;
+
               fetch('patents.yaml')
                   .then(response => response.text())
                   .then(text => {
                       const data = jsyaml.load(text);
                       const patentList = document.getElementById('patent-list');
+                      const toggleBtn = document.getElementById('patent-toggle-btn');
+                      const hiddenCountSpan = document.getElementById('hidden-patent-count');
+
+                      let allPatents = [];
+
                       data.patents.forEach((patent, index) => {
                           const patentItem = document.createElement('div');
                           patentItem.className = 'patent-item';
+
+                          // 隐藏超过初始显示数量的专利
+                          if (index >= INITIAL_PATENT_COUNT) {
+                              patentItem.classList.add('patent-item-hidden');
+                          }
+
                           let awardHtml = '';
                           if (patent.url === 'https://www.patentguru.com/cn/CN117950401B') {
                             awardHtml = "<span class='paper-award'>NetEase's Top 10 Patents (2025)</span>";
@@ -468,7 +484,33 @@
                               </div>
                           `;
                           patentList.appendChild(patentItem);
+                          allPatents.push(patentItem);
                       });
+
+                      // 如果专利数量超过初始显示数量，显示"显示更多"按钮
+                      if (data.patents.length > INITIAL_PATENT_COUNT) {
+                          const hiddenCount = data.patents.length - INITIAL_PATENT_COUNT;
+                          hiddenCountSpan.textContent = hiddenCount;
+                          toggleBtn.style.display = 'block';
+
+                          let isExpanded = false;
+                          toggleBtn.addEventListener('click', function() {
+                              isExpanded = !isExpanded;
+                              const hiddenPatents = document.querySelectorAll('.patent-item-hidden');
+
+                              if (isExpanded) {
+                                  hiddenPatents.forEach(item => {
+                                      item.style.display = 'flex';
+                                  });
+                                  toggleBtn.innerHTML = 'Show Less';
+                              } else {
+                                  hiddenPatents.forEach(item => {
+                                      item.style.display = 'none';
+                                  });
+                                  toggleBtn.innerHTML = `Show More (<span id="hidden-patent-count">${hiddenCount}</span>)`;
+                              }
+                          });
+                      }
                   })
                   .catch(error => console.error('Error loading YAML file:', error));
           </script>

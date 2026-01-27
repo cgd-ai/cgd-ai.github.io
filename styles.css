@@ -665,6 +665,29 @@ footer {
     color: #1a2a6c;
 }
 
+.patent-item-hidden {
+    display: none;
+}
+
+.show-more-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 24px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    color: #2c3e50;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 /* 响应式设计 - Publications & Patents */
 @media (max-width: 768px) {
     .publication-item {
