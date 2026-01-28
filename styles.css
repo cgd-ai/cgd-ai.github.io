@@ -621,32 +621,32 @@ footer {
 .patent-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .patent-item {
     display: flex;
     background: #f8f9fa;
     border-left: 3px solid #1a2a6c;
-    padding: 10px 15px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 4px;
     transition: all 0.3s ease;
     align-items: flex-start;
 }
 
 .patent-item:hover {
     background: #ffffff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transform: translateX(2px);
 }
 
 .patent-number {
     color: #1a2a6c;
     font-weight: 600;
-    font-size: 0.95rem;
-    margin-right: 12px;
-    min-width: 25px;
-    padding-top: 1px;
+    font-size: 0.88rem;
+    margin-right: 10px;
+    min-width: 22px;
+    padding-top: 0;
 }
 
 .patent-content {
@@ -655,9 +655,9 @@ footer {
 
 .patent-title {
     color: #2c3e50;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     text-decoration: none;
-    line-height: 1.4;
+    line-height: 1.5;
     transition: color 0.3s ease;
 }
 
@@ -671,13 +671,13 @@ footer {
 
 .show-more-btn {
     display: block;
-    margin: 20px auto 0 auto;
-    padding: 10px 24px;
+    margin: 15px auto 0 auto;
+    padding: 8px 20px;
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
-    border-radius: 6px;
+    border-radius: 5px;
     color: #2c3e50;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
