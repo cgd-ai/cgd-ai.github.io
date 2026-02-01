@@ -852,6 +852,7 @@ footer {
 #projects .content-section {
     padding: 20px 24px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 #projects .content-section h3 {
@@ -860,6 +861,36 @@ footer {
     font-weight: 600;
     margin-bottom: 10px;
     margin-top: 0;
+}
+
+.project-org-tag {
+    position: absolute;
+    right: 15px;
+    top: -5px;
+    display: inline-block;
+    color: white;
+    padding: 8px 16px 12px 16px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), 50% 100%, 0 calc(100% - 8px));
+    transition: all 0.3s ease;
+}
+
+.project-org-tag:hover {
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.4);
+    transform: translateY(2px);
+}
+
+.project-org-netease {
+    background: linear-gradient(180deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.project-org-ustc {
+    background: linear-gradient(180deg, #5b7dff 0%, #4158d0 100%);
 }
 
 /* 响应式设计 - Projects */
@@ -878,6 +909,19 @@ footer {
     #projects .content-section {
         padding: 16px 18px;
         margin-bottom: 16px;
+    }
+
+    #projects .content-section h3 {
+        font-size: 1rem;
+    }
+
+    .project-org-tag {
+        right: 10px;
+        top: -3px;
+        font-size: 0.6rem;
+        padding: 6px 12px 10px 12px;
+        letter-spacing: 1px;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), 50% 100%, 0 calc(100% - 7px));
     }
 
     .project-text h3 {
