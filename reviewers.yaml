@@ -31,6 +31,8 @@ reviewers:
     url: "https://www.sciencedirect.com/journal/isa-transactions"
   - name: "JRESS"
     url: "https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety"
+  - name: "Array"
+    url: "https://www.sciencedirect.com/journal/array"  
   - name: "Remote Sensing"
     url: "https://www.mdpi.com/journal/remotesensing"
   - name: "Ocean Engineering"
