@@ -2,7 +2,7 @@
   {
     "title": "Efficient and Robust Shoveling Control System based on Semantic Elevation Mapping for Unmanned Loaders",
     "link": "https://doi.org/10.1016/j.engappai.2026.113908",
-    "authors": "<b>Guangda Chen</b>, Zhiwen Zhang, Lin Cheng, Cheng Jin, Shunyi Yao, Yue Wang, Rong Xiong and Yingfeng Chen.",
+    "authors": "<b>Guangda Chen</b>, Zhiwen Zhang, Lin Cheng, Cheng Jin, Shunyi Yao, <a href='https://ywang-zju.github.io/'>Yue Wang</a>, <a href='https://person.zju.edu.cn/0097062'>Rong Xiong</a> and <a href='https://chyf.ink/'>Yingfeng Chen</a>.",
     "venue": "Engineering Applications of Artificial Intelligence",
     "venueLink": "https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence",
     "rating": "(Volume 167, Part 2, 1 March 2026)",
@@ -17,7 +17,7 @@
   {
     "title": "Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation",
     "link": "https://ieeexplore.ieee.org/document/10356425",
-    "authors": "<b>Guangda Chen</b>, Yinghao Gan, J. Chen, S. Shi, W. Chen, <a href='https://scholar.google.com/citations?user=SSBrkpMAAAAJ&hl=en'>Y. Chen</a>, <a href='https://scholar.google.com/citations?hl=en&user=1hI9bqUAAAAJ'>Rong Xiong</a> and Changjie Fan.",
+    "authors": "<b>Guangda Chen</b>, Yinghao Gan, Jiayi Chen, Shuanwu Shi, Wei Chen, <a href='https://scholar.google.com/citations?user=SSBrkpMAAAAJ&hl=en'>Yingfeng Chen</a>, <a href='https://scholar.google.com/citations?hl=en&user=1hI9bqUAAAAJ'>Rong Xiong</a> and Changjie Fan.",
     "venue": "ICTAI 2023",
     "venueLink": "https://ictai.computer.org/2023/",
     "rating": "(CCF-C)",
@@ -60,7 +60,7 @@
   {
     "title": "Robot Navigation with Map-Based Deep Reinforcement Learning",
     "link": "https://ieeexplore.ieee.org/document/9238090",
-    "authors": "<b>Guangda Chen</b>, Lifan Pan, Y. C., P. X., Z. W., P. W., <a href='http://staff.ustc.edu.cn/~jianmin/'>Jianmin Ji</a> and Xiaoping Chen.",
+    "authors": "<b>Guangda Chen</b>, Lifan Pan, Yu'an Chen, Pei Xu, Zhiqiang Wang, Peichen Wu, <a href='http://staff.ustc.edu.cn/~jianmin/'>Jianmin Ji</a> and Xiaoping Chen.",
     "venue": "ICNSC 2020",
     "venueLink": "http://www.icnsc2020.org/",
     "rating": "(CAA-B)",
@@ -77,7 +77,7 @@
   {
     "title": "Deep Reinforcement Learning of Map-Based Obstacle Avoidance for Mobile Robot Navigation",
     "link": "https://link.springer.com/article/10.1007/s42979-021-00817-z",
-    "authors": "<b>Guangda Chen</b>, Lifan Pan, Y. C., P. X., Z. W., P. W., Jianmin Ji and Xiaoping Chen.",
+    "authors": "<b>Guangda Chen</b>, Lifan Pan, Yu'an Chen, Pei Xu, Zhiqiang Wang, Peichen Wu, Jianmin Ji and Xiaoping Chen.",
     "venue": "SN Computer Science",
     "venueLink": "https://www.springer.com/journal/42979",
     "rating": "(Volume: 2 , Issue: 6 , August, 18, 2021)",
@@ -92,7 +92,7 @@
   {
     "title": "Distributed Non-Communicating Multi-Robot Collision Avoidance via Map-Based Deep Reinforcement Learning",
     "link": "https://www.mdpi.com/1424-8220/20/17/4836",
-    "authors": "<b>Guangda Chen</b>, Shunyi Yao, Jun Ma, L. P., Y. C., P. X., Jianmin Ji and Xiaoping Chen.",
+    "authors": "<b>Guangda Chen</b>, Shunyi Yao, Jun Ma, Lifan Pan, Yu'an Chen, Pei Xu, Jianmin Ji and Xiaoping Chen.",
     "venue": "Sensors",
     "rating": "(Volume: 20, Issue: 17 , August, 27, 2020)",
     "impact_factor": "3.5",
