@@ -496,13 +496,20 @@
 
                           let awardHtml = '';
                           if (patent.url === 'https://www.patentguru.com/cn/CN117950401B') {
-                            awardHtml = "<span class='paper-award'>NetEase's Top 10 Patents (2025)</span>";
+                            awardHtml = "<span class='patent-award-badge'>🏆 NetEase's Top 10 Patents (2025)</span>";
                           }
+
+                          // 从URL中提取公开号
+                          const patentNumber = patent.url.split('/').pop();
+
                           patentItem.innerHTML = `
                               <div class="patent-number">${index + 1}.</div>
                               <div class="patent-content">
                                   <a href="${patent.url}" class="patent-title bluelink">${patent.title}</a>
-                                  ${awardHtml}
+                                  <div class="patent-meta">
+                                      ${awardHtml}
+                                      <span class="patent-id">${patentNumber}</span>
+                                  </div>
                               </div>
                           `;
                           patentList.appendChild(patentItem);
