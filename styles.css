@@ -1434,6 +1434,28 @@ footer .container {
     box-shadow: 0 2px 6px rgba(26, 42, 108, 0.15);
 }
 
+/* Reviewer subcategory styles */
+.reviewer-subcategory {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #1a2a6c;
+}
+
+.reviewer-subcategory:last-child {
+    margin-bottom: 0;
+}
+
+.reviewer-subcategory-title {
+    color: #1a2a6c;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 /* 响应式设计 - Reviewer */
 @media (max-width: 768px) {
     .reviewer-section {
@@ -1461,6 +1483,16 @@ footer .container {
     .reviewer-tags .bb {
         padding: 2px 6px;
         font-size: 0.75rem;
+    }
+
+    .reviewer-subcategory {
+        margin-bottom: 12px;
+        padding: 10px;
+    }
+
+    .reviewer-subcategory-title {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
     }
 }
 

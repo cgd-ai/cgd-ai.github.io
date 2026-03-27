@@ -566,7 +566,7 @@
 
             <div class="reviewer-category">
                 <p class="reviewer-label">Journal Reviewer:</p>
-                <div id="reviewers" class="reviewer-tags"></div>
+                <div id="reviewers-container"></div>
             </div>
 
             <script>
@@ -576,11 +576,74 @@
                         const yamlText = await response.text();
                         const data = jsyaml.load(yamlText);
 
-                        const reviewersDiv = document.getElementById('reviewers');
-                        const reviewerLinks = data.reviewers.map(reviewer => {
-                            return `<a href="${reviewer.url}" class="bluelink bb">${reviewer.name}</a>`;
+                        const reviewersContainer = document.getElementById('reviewers-container');
+
+                        // Group reviewers by category
+                        const categoryMap = {
+                            'Robotics': '🤖 Robotics',
+                            'AI': '🧠 Artificial Intelligence',
+                            'Control': '⚙️ Control Systems',
+                            'Civil Engineering': '🏗️ Civil Engineering',
+                            'MDPI': '📖 MDPI Journals'
+                        };
+
+                        const groupedReviewers = {};
+                        data.reviewers.forEach(reviewer => {
+                            const category = reviewer.category || 'Other';
+                            if (!groupedReviewers[category]) {
+                                groupedReviewers[category] = [];
+                            }
+                            groupedReviewers[category].push(reviewer);
                         });
-                        reviewersDiv.innerHTML = reviewerLinks.join('');
+
+                        // Sort categories in desired order
+                        const categoryOrder = ['Robotics', 'AI', 'Control', 'Civil Engineering', 'MDPI'];
+                        let html = '';
+
+                        categoryOrder.forEach(category => {
+                            if (groupedReviewers[category]) {
+                                const displayName = categoryMap[category] || category;
+                                html += `
+                                    <div class="reviewer-subcategory">
+                                        <h5 class="reviewer-subcategory-title">${displayName}</h5>
+                                        <div class="reviewer-tags">
+                                `;
+
+                                const reviewerLinks = groupedReviewers[category].map(reviewer => {
+                                    return `<a href="${reviewer.url}" class="bluelink bb">${reviewer.name}</a>`;
+                                });
+                                html += reviewerLinks.join('');
+
+                                html += `
+                                        </div>
+                                    </div>
+                                `;
+                            }
+                        });
+
+                        // Add any remaining categories not in the predefined order
+                        Object.keys(groupedReviewers).forEach(category => {
+                            if (!categoryOrder.includes(category)) {
+                                const displayName = categoryMap[category] || category;
+                                html += `
+                                    <div class="reviewer-subcategory">
+                                        <h5 class="reviewer-subcategory-title">${displayName}</h5>
+                                        <div class="reviewer-tags">
+                                `;
+
+                                const reviewerLinks = groupedReviewers[category].map(reviewer => {
+                                    return `<a href="${reviewer.url}" class="bluelink bb">${reviewer.name}</a>`;
+                                });
+                                html += reviewerLinks.join('');
+
+                                html += `
+                                        </div>
+                                    </div>
+                                `;
+                            }
+                        });
+
+                        reviewersContainer.innerHTML = html;
                     } catch (error) {
                         console.error('Error loading reviewers:', error);
                     }
