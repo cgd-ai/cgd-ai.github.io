@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guangda Chen - Personal Website</title>
     <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/source-serif-4@5/index.css">
     <link rel="stylesheet" type="text/css" href="main.css" id="css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -16,7 +19,7 @@
             <h1>Guangda Chen
                             <a class="subtitle" itemprop="sameAs" content="https://orcid.org/0000-0003-1888-9947" href="https://orcid.org/0000-0003-1888-9947" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a>
             </h1>
-            <p class="subtitle">Senior Robot Engineer, Fuxi Robotics in NetEase</p>
+            <p class="subtitle">Senior Robot Engineer, NetEase Lingdong</p>
             <!-- <p>NetEase Fuxi Robotics</p> -->
         </div>
     </header>
@@ -42,27 +45,26 @@
     <main class="container">
         <!-- 首页部分 -->
         <section id="home" class="page-section">
-            <br>
-            <h2 class="section-title">Welcome to My Personal Website</h2>
+            <p class="home-tagline">Robotics &middot; Automation &middot; Embodied AI</p>
 
             <div class="card-container">
                 <div class="card">
                     <h3>About Me</h3>
                     <p>Dr. Guangda Chen currently serves as a Senior Robot Engineer at Fuxi Robotics in NetEase.
-                    He holds a Ph.D. degree in Computer Science from the University of Science and Technology of China (2021).</p>
-                    <button class="btn nav-btn" data-target="about">Learn More</button>
+                    He holds a Ph.D. degree in Computer Science from the USTC (2021).</p>
+                    <button class="btn nav-btn" data-target="about">Learn more <span class="btn-arrow">&rarr;</span></button>
                 </div>
 
                 <div class="card">
                     <h3>Projects</h3>
                     <p>Research and development projects spanning heavy machine automation, deep reinforcement learning-based navigation and service robotics.</p>
-                    <button class="btn nav-btn" data-target="projects">View Projects</button>
+                    <button class="btn nav-btn" data-target="projects">View projects <span class="btn-arrow">&rarr;</span></button>
                 </div>
 
                 <div class="card">
                     <h3>Publications</h3>
-                    <p>Academic publications, <a href="#talks" class="nav-link" style="color: #1a2a6c; text-decoration: none;">conference presentations</a>, and granted patents in robotics, artificial intelligence, and autonomous systems.</p>
-                    <button class="btn nav-btn" data-target="publications">View Publications</button>
+                    <p>Academic publications, <a href="#talks" class="nav-link" style="color: var(--ink-blue); text-decoration: none;">conference presentations</a>, and granted patents in robotics, artificial intelligence, and autonomous systems.</p>
+                    <button class="btn nav-btn" data-target="publications">View publications <span class="btn-arrow">&rarr;</span></button>
                 </div>
             </div>
             
@@ -830,7 +832,7 @@
         <div class="footer-section resources-section">
             <h4>&copy; 2026 Guangda Chen. All rights reserved.</h4>
             <p class="footer-note">The materials on this website are provided to facilitate the timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons accessing this information are expected to adhere to the terms and constraints invoked by each author's copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.</p>
-            <a href="https://orcid.org/0000-0002-9502-1204"  class="fontnorm bluelink fontverysmall bb">Song-Jia Yi's ORCID</a> | <a href="old.html"  class="fontnorm bluelink fontverysmall bb">Old Website</a> | <a href="#home"  class="fontnorm bluelink fontverysmall bb">ChatGPT-formatted Website</a>
+            <a href="https://orcid.org/0000-0002-9502-1204"  class="fontnorm bluelink fontverysmall bb">Song-Jia Yi's ORCID</a> | <a href="old.html"  class="fontnorm bluelink fontverysmall bb">Old Website</a> | <a href="#home"  class="fontnorm bluelink fontverysmall bb">ChatGPT-formatted</a>
         </div>
         
         <!-- 版权信息区域 -->
@@ -850,22 +852,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 状态管理变量
     let currentSection = 'home';
-    
-    // 显示指定部分，隐藏其他部分
+    let isTransitioning = false;
+    const FADE_OUT_MS = 180;
+
+    // 滚动到目标位置（始终回到顶部，保留 header 可见）
+    function scrollToSection(sectionId) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 显示指定部分，使用交叉淡入淡出
     function showSection(sectionId, scrollToTop = true) {
-        // 隐藏所有部分
-        pageSections.forEach(section => {
-            section.style.display = 'none';
-        });
-
-        // 显示目标部分
+        if (isTransitioning) return;
         const targetSection = document.getElementById(sectionId);
-        if (targetSection) {
-            targetSection.style.display = 'block';
-            currentSection = sectionId;
-        }
+        if (!targetSection) return;
 
-        // 更新导航菜单激活状态
+        // 同步更新导航菜单激活状态（立即反馈）
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${sectionId}`) {
@@ -873,32 +874,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // 根据参数决定是否滚动
-        if (scrollToTop) {
-            setTimeout(() => {
-                if (sectionId === 'home') {
-                    // Home页面滚动到网站最顶部（包括header）
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    // 其他页面滚动到导航栏位置
-                    const nav = document.querySelector('nav');
-                    if (nav) {
-                        const navTop = nav.offsetTop;
-                        window.scrollTo({
-                            top: navTop,
-                            behavior: 'smooth'
-                        });
-                    } else {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            }, 10); // 短暂延迟确保DOM已更新
+        // 找到当前正在显示的 section
+        const visibleSection = Array.from(pageSections).find(s =>
+            s.style.display !== 'none' && getComputedStyle(s).display !== 'none'
+        );
+
+        // 同一个 section，无需切换；只滚动
+        if (visibleSection === targetSection) {
+            if (scrollToTop) scrollToSection(sectionId);
+            return;
+        }
+
+        const doSwap = () => {
+            pageSections.forEach(s => { s.style.display = 'none'; s.classList.remove('is-leaving'); });
+            // 强制重排以重新触发入场动画
+            targetSection.style.display = 'block';
+            void targetSection.offsetWidth;
+            currentSection = sectionId;
+            if (scrollToTop) scrollToSection(sectionId);
+            isTransitioning = false;
+        };
+
+        if (visibleSection) {
+            isTransitioning = true;
+            visibleSection.classList.add('is-leaving');
+            setTimeout(doSwap, FADE_OUT_MS);
+        } else {
+            doSwap();
         }
     }
     
