@@ -595,8 +595,8 @@ footer::before {
 
 footer .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
+    grid-template-columns: minmax(180px, 220px) 1fr;
+    gap: 28px;
     align-items: start;
 }
 
@@ -632,6 +632,28 @@ footer a {
 }
 
 footer a:hover { color: var(--ink-blue-deep); }
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-top: 8px;
+    align-items: baseline;
+}
+
+.footer-links > a {
+    position: relative;
+    white-space: nowrap;
+}
+
+.footer-links > a + a::before {
+    content: '·';
+    position: absolute;
+    left: -10px;
+    color: var(--ink-soft);
+    opacity: 0.6;
+    pointer-events: none;
+}
 
 /* ==========================================================================
    Back to top — refined ink button with progress ring
