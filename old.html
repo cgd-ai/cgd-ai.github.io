@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cgdsss</title>
+<link rel="shortcut icon" href="favicon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="main.css" id="css">
+<!-- <style type="text/css">
+</style> -->
+<link rel="shortcut icon" href="./pic/ustc.ico">
+<!-- <script>
+  var request = new XMLHttpRequest();
+  
+  request.open('GET', 'https://api.ipdata.co/?api-key=e70fe0136eacb22381b6d701d5dc0425ada89dff7d9a9754db77042b');
+  
+  request.setRequestHeader('Accept', 'application/json');
+  
+  request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      if (this.responseText.search("China") != -1){
+        window.location.href="https://cgdsss.gitee.io/cgd/";
+      }
+    }
+  };
+  
+  request.send();
+</script> -->
+<script>
+  function validataOS(){
+if(navigator.userAgent.indexOf("Window")>0){
+return "Windows";
+}else if(navigator.userAgent.indexOf("Mac OS X")>0) {
+return "Mac";
+}else if(navigator.userAgent.indexOf("Linux")>0) {
+return "Linux";
+}else{
+return "NUll";
+}
+}
+if (validataOS() == "Linux") {
+  var obj = document.getElementById("css");
+  obj.setAttribute("href","mainlinux.css");
+}
+if (validataOS() == "Mac") {
+  var obj = document.getElementById("css");
+  obj.setAttribute("href","mainlinux.css");
+}
+</script>
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="top"></button>
+  <div align="center" class="backgrounddiv">
+  <div id = "page_size" style="width:1000px" >
+  <div class="divpad fontgrounddiv shadow">
+  <div>
+    <div class="maxwidth leftfloat" align="left">
+      <p>
+        <br>
+        <a class="blacklink" style="font-size: 2em;" href="https://cgd-ai.github.io/"><b>Guangda Chen</b></a>
+        <a itemprop="sameAs" content="https://orcid.org/0000-0003-1888-9947" href="https://orcid.org/0000-0003-1888-9947" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a>
+        <!-- <br> -->
+        <!-- <div id = "title_br"><br></div> -->
+      </p>
+    </div>
+  </div>
+  <div id = "title_div">
+    <div class="width70 leftfloat" align="left" id = "title_div_left">
+      <p>
+        <br>
+        <a><b>Address : </b></a>
+        <br>
+        NetEase, 399 Wangshang Road, Binjiang District, Hangzhou, China.<a href="https://surl.amap.com/UVunOpU8D8" id="icon" ><img src="./pic/gmap.ico" /></a>
+        <br><br>
+        <a><b>Email: </b></a>
+        <br>
+        <a href=mailto:cgdsss@mail.ustc.edu.cn class="bluelink" ">cgdsss@mail.ustc.edu.cn</a>;
+        <a href=mailto:cgdsss@zju.edu.cn class="bluelink" ">cgdsss@zju.edu.cn</a>
+        <br><br>
+        <a style="line-height:1.8;"><b>Navigator: </b></a>
+        <br>
+        <a href="#about" class="fontlarge bluelink bb">About</a> 
+        <a href="#employ" class="fontlarge bluelink bb">Employment</a> 
+        <a href="#edu" class="fontlarge bluelink bb">Education</a>  
+        
+        <a href="#project" class="fontlarge bluelink bb">Project</a>
+        <a href="#pubs" class="fontlarge bluelink bb">Publication</a>
+      </p>
+    </div>
+    <div class="width30 leftfloat" align="center" id = "title_div_right">
+      <a href="./day.html" id="icon" ><img id="imglove" style="width: 100%" src="./pic/CGD2.jpg" /></a>
+      <!-- <a href="./day.html" id="icon" ><img id="imglove" style="width: 100%" src="./pic/b.jpg" /></a> -->
+      <!-- <a id="wordlove" style="font-family: Comic Sans MS; font-size: 1.1em;"> <I>My sally girl, My love</I></a> -->
+    <div id="img_br">
+      <br>
+      <br>
+    </div>
+    </div>
+    <hr color=#987cb9 SIZE=2 />
+  </div>
+  
+  <div id="about">
+    <div class="width25 leftfloat" align="left" id="about_title">
+      <br>
+      <a class="fontbig blacklink">About</a>
+    </div>
+    <div class="width75 leftfloat linebigheight" align="left" id="about_content">
+      <p style="text-align:justify;">
+        Dr. Guangda Chen is currently working as a Senior Robot Engineer at <a href="https://fuxi.163.com/"  class="bluelink">Fuxi Robotics in NetEase</a>.
+        And he is also a postdoctoral researcher at the College of Control Science and Engineering, <a href="https://www.zju.edu.cn/"  class="bluelink">Zhejiang University</a>
+        (advised by Prof. <a href="https://person.zju.edu.cn/0097062"  class="bluelink">Rong Xiong</a>).
+        He received his Ph.D. degree in Computer Science from 
+      <a href="https://www.ustc.edu.cn/" class="bluelink" >University of Science and Technology of China </a> in 2021 
+      (BA17011, advised by Prof. 
+      <a href="https://cs.ustc.edu.cn/2020/0828/c23235a460075/pagem.htm"  class="bluelink">Xiaoping Chen</a> in the 
+      <a href="http://ai.ustc.edu.cn/" class="bluelink" >USTC Robotics Laboratory</a>).
+      Before joining USTC Robotics Lab in 2015, 
+      he received a Bachelor of Administration from <a href="http://www.cmu.edu.cn/"  class="bluelink">China Medical 
+        University</a> in 2014. 
+        As a graduate student, he focused on researching mobile robot navigation in dynamic and crowded environments. 
+        Currently, he is dedicated to developing and applying innovative automation and intelligent technologies in heavy construction machinery.
+      <br><br>
+      Find him on:
+      <br>
+      <a href="https://github.com/cgdsss"   id="icon" title="GitHub"><img src="./pic/github.ico" /></a>
+      <a href="https://scholar.google.com/citations?user=h7vRddgAAAAJ&hl=zh-CN" id="icon"  title="Google Scholar"><img src="./pic/gs.ico" /></a>
+      <a href="https://space.bilibili.com/14005427"   id="icon" title="bilibili"><img src="./pic/bili.ico" /></a>
+      <a href="https://www.douban.com/people/cgdsss/"   title="豆瓣" id="icon"><img src="./pic/douban.ico" /></a>
+      <!-- <a href="http://weibo.com/cgdsss"   title="新浪微博" id="icon"><img src="./pic/weibo.ico" /></a> -->
+      <a href="https://music.163.com/#/user/home?id=430012241"   title="网易云音乐" id="icon"><img src="./pic/music.ico" /></a>
+      <a href="https://www.linkedin.com/in/%E5%B9%BF%E5%A4%A7-%E9%99%88-1b0770109/"   id="icon" title="Linkedin"><img src="./pic/link.ico" /></a>
+      <a href="https://www.facebook.com/guangda.chen.9"   title="facebook" id="icon"><img src="./pic/facebook.ico" /></a>
+      <a href="https://twitter.com/cgdsss_USTC"   title="Twitter" id="icon"><img src="./pic/twitter.ico" /></a>
+      <a href="https://www.instagram.com/guangdachen/"   title="instagram" id="icon"><img src="./pic/ins.ico" /></a>
+      <a href="https://plus.google.com/u/0/100646927760929911525"   title="Google+" id="icon"><img src="./pic/googleplus.ico" /></a>
+      </p>
+    </div>
+    <hr color=#987cb9 SIZE=1 />
+  </div>
+  
+  <div id="employ">
+    <div class="width25 leftfloat" align="left" id="employ_title">
+      <br>
+      <a class="fontbig blacklink">Employment</a>
+    </div>
+    <div class="width75 leftfloat linebigheight" align="left" id="employ_content">
+      <p>
+      <a href="https://ir.netease.com/"  class="fontnorm bluelink"> NetEase, Inc.</a>, 
+      <a class="fontsmall">Senior Robot Engineer</a>
+      <br>
+      - <a href="https://fuxi.163.com/"  class="bluelink"> Fuxi Robotics</a>, 
+      <a class="fontsmall"><em>2021 — now</em></a>
+      <br>
+      </p>
+      <p>
+      <a href="https://www.zju.edu.cn/"  class="fontnorm bluelink"> Zhejiang University</a>, 
+      <a class="fontsmall">Postdoc [Prof. <a href="https://person.zju.edu.cn/0097062">Rong Xiong</a>]</a>
+      <br>
+      - <a href="http://www.cse.zju.edu.cn/"  class="bluelink"> College of Control Science and Engineering</a>, 
+      <a class="fontsmall"><em>2023 — 2025</em></a>
+      <br>
+      </p>
+    </div>
+    <hr color=#987cb9 SIZE=1 />
+  </div>
+
+  <div id="edu">
+    <div class="width25 leftfloat" align="left" id="edu_title">
+      <br>
+      <a class="fontbig blacklink">Education</a>
+    </div>
+    <div class="width75 leftfloat linebigheight" align="left" id="edu_content">
+      <p>
+      <a href="https://www.ustc.edu.cn/"  class="fontnorm bluelink"> University of Science and Technology of China</a>, 
+      <a class="fontsmall">PhD [Prof. 
+        <a href="https://cs.ustc.edu.cn/2020/0828/c23235a460075/pagem.htm" >Xiaoping Chen</a>]</a>
+      <br>
+      - <a href="http://cs.ustc.edu.cn/"  class="bluelink"> School of Computer Science and Technology</a>, 
+      <a class="fontsmall"><em>2015 — 2021</em></a>
+      <br>
+      </p>
+      <p>
+      <a href="http://www.cmu.edu.cn/"  class="fontnorm bluelink"> China Medical University</a>, 
+      <a class="fontsmall">BAdmin</a>
+      <br>
+      - <a href="https://www.cmu.edu.cn/cmudmi/xygk/xyjj.htm"  class="bluelink"> Medical Informatics</a>, 
+      <a class="fontsmall"><em>2011 — 2014</em></a>
+      <br>
+      - <a href="https://www.cmudental.com/"  class="bluelink"> Stomatology</a>, 
+      <a class="fontsmall"><em>2010 — 2011</em></a>
+      <br>
+      </p>
+    </div>
+    <hr color=#987cb9 SIZE=1 />
+  </div>
+  
+  <div id="project">
+    <div class="width25 leftfloat" align="left" id="project_title">
+      <br>
+      <a class="fontbig blacklink">Project</a>
+    </div>
+    <div class="width75 leftfloat linebigheight" align="left" id="project_content">
+      <p>
+        <a  class="fontnorm bluelink pub-venue" href="https://lingdong.fuxi.163.com/home?lang=en"> <b>Heavy Machine Automation
+          </b></a> <a class="fontverysmall"><em>(2021 - now)</em></a> <br>
+          Planning and Control Group, Fuxi Robotics in NetEase.
+        <ul>
+          <li>
+            <a href="https://lingdong.fuxi.163.com/productSummary/loader?lang=en"  class="bluelink">Unmanned loader</a>
+            <a href="pdf/2023中国互联网大会创新十大典型案例.jpg"  class="bluelink">[Media]</a>
+          </li>
+          <li>
+            <a href="https://lingdong.fuxi.163.com/productSummary/wj?lang=en"  class="bluelink">Robotic excavator</a> 
+            <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf"  class="bluelink">[PDF]</a>, <a href="https://youtu.be/N6I0WZGSF68"  class="bluelink">[Demo]</a>
+          </li>
+
+        </ul>
+      </p>
+      <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
+
+      <p>
+        <a href="https://github.com/DRL-Navigation" class="fontnorm bluelink"> <b>DRL-based Navigation</b></a> <a class="fontverysmall"><em>(2019 - 2021)</em></a> <br> 
+        <a class="pub-authors">Group Leader </a>, <a href="https://github.com/DRL-Navigation" class="award ">Open source code on GitHub</a>
+        <br>
+        <ul>
+          <li>
+            <a href="pdf/ICNSC_2020_paper_11.pdf" class="bluelink"> DQN-based Obstacle Avoidance</a>, <a href="https://youtu.be/Eq4AjsFH_cU"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            <a href="pdf/IROS_2021_DRQNNav.pdf" class="bluelink"> DRQN-based 3D Obstacle Avoidance</a>, <a href="https://youtu.be/cnCid0qOZg4"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            <a href="pdf/ICTAI_2020.pdf" class="bluelink"> Multi-Robot Collision Avoidance</a>, <a href="https://youtu.be/KOb1q23L7-U"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            <a href="pdf/IROS_2021_PedNav.pdf" class="bluelink">Crowd Navigation</a>, <a href="https://www.bilibili.com/video/BV1Vb4y1D7R6"  class="bluelink">[Demo]</a>, <a href="gitstats/authors.html" class="bluelink" target="_blank"> [Code statistics] </a>
+          </li>
+          <li>
+            <a href="pdf/ICRA2022_BEEP_FINAL_06_03.pdf" class="bluelink">Crowd Navigation with Interaction Capacity</a>
+          </li>
+        </ul>
+      </p>
+
+      <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
+
+
+      <p>
+        <a  class="fontnorm bluelink" href="pic/PandaBot.jpg"> <b>Panda Robot</b></a> <a class="fontverysmall"><em>(2020 - 2021)</em></a>  <br> 
+        Tour guide robot at the <a href="https://www.panda.org.cn/en/education/framework/2023-07-16/7850.html" class="bluelink">Chengdu Giant Panda Museum. </a> <br>
+        <a class="pub-authors">Group Leader, </a> (<a href="pdf/phd_cgd.pdf#page=112" class="bluelink">PhD thesis</a>, <a href="pdf/phd_cgd.pdf#page=90" class="bluelink">Ch. 4</a> and <a href="pdf/phd_cgd.pdf#page=112" class="bluelink">Ch. 5</a>)<br>
+        <ul>
+          <li>
+            Pedestrian detection and tracking, <a href="https://www.bilibili.com/video/BV1HB4y1P7xE"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            Long-term robust localization, <a href="https://www.bilibili.com/video/BV1q5411w7qX"  class="bluelink">[Demo]</a>
+          </li>
+          <li>
+            Navigation in dense crowds, <a href="https://www.bilibili.com/video/BV13Z4y1A7br"  class="bluelink">[Brief Demo]</a>, <a href="https://www.bilibili.com/video/BV1wU4y1V7cA?share_source=copy_web"  class="bluelink">[Full Demo]</a>
+          </li>
+          <li>
+            <a style="color: #0066CC;"> Tour guide service v1.0</a>, <a href="https://www.bilibili.com/video/BV1UM4y1u7t8"  class="bluelink">[Demo]</a>
+          </li>
+        </ul>
+      </p>
+
+      <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
+      <p>
+      <a href="https://ai.ustc.edu.cn/en/robocup/atHome/media.php"  class="fontnorm bluelink"> <b>Kejia Robot</b></a> <a class="fontverysmall"><em>(2015 - 2019)</em></a>
+      <br>
+      Team: <a href="http://ai.ustc.edu.cn/en/robocup/atHome"  class="fontnorm bluelink">WrightEagle@Home</a>
+      <br>
+      <a href="pdf/tdp19.pdf"  class="bluelink">[TDP <img src="./pic/pdf.gif" />]</a>, <a href="pdf/poster19_athome.pdf"  class="bluelink">[Poster <img src="./pic/pdf.gif" />]</a>, <a href="pdf/ECRDC_USTC.pdf"  class="bluelink">[Report <img src="./pic/pdf.gif" />]</a>, <a href="https://youtu.be/sWi9EOKIhlE"  class="bluelink">[Demo]</a>
+      <table border="1" cellpadding="3" cellspacing="0">
+        <tr>
+          <th>Event</th>
+          <th>Place</th>
+          <th>Award</th>
+          <th>Role</th>
+        </tr>
+        <tr>
+          <td><a href="http://www.rcccaa.org/zdy/gui.html"  class="bluelink"> RoboCup China Open@Home league 2015 </a></td>
+          <td><a class="pub-authors fontsmall"> Guiyang, China </a></td>
+          <td><a class="pub-authors fontsmall">Champion</a></td>
+          <td><a class="pub-authors fontsmall">Major</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.robocup.org/events/5"  class="bluelink"> RoboCup@Home league 2016 </a></td>
+          <td><a class="pub-authors fontsmall"> Leipzig, Germany </a></td>
+          <td><a class="pub-authors fontsmall">3rd Place</a></td>
+          <td><a class="pub-authors fontsmall">Major</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.robocup.org/events/14"  class="bluelink"> Pre-RoboCup Asia-Pacific Competition </a></td>
+          <td><a class="pub-authors fontsmall"> Beijing, China </a></td>
+          <td><a class="pub-authors fontsmall">Champion</a></td>
+          <td><a class="pub-authors fontsmall">Major</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.robocup.org/events/6"  class="bluelink"> RoboCup@Home league 2017 </a></td>
+          <td><a class="pub-authors fontsmall"> Nagoya, Japan </a></td>
+          <td><a class="pub-authors fontsmall">Best in Manipulation</a></td>
+          <td><a class="pub-authors fontsmall">Major</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.ijcai19.org/competitions.html"  class="bluelink"> The IJCAI-2019 Eldercare Robot Challenges </a></td>
+          <td><a class="pub-authors fontsmall"> Macau, China </a></td>
+          <td><a class="pub-authors fontsmall">Champion</a></td>
+          <td><a class="pub-authors fontsmall">Leader</a></td>
+        </tr>
+      </table>
+      </p>
+      
+      <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
+      
+        <a href="https://optitrack.com/"  class="fontnorm bluelink"> <b>MoCap System</b></a> <a class="fontverysmall"><em>(2016 - 2018)</em></a><br>
+        <p>
+        for Testing: 
+        <br>
+        - <a href="pdf/Cleaning_Robots_Test.pdf" class="bluelink">Cleaning Robots Test</a><br>
+        - <a href="http://roboticsbase.ustc.edu.cn/"  class="bluelink">Anhui Robot Technology Standard Innovation Base</a> 
+        <br>
+        for Calibration:
+        <br>
+        - <a href="http://staff.ustc.edu.cn/~wufeng02/doc/pdf/ZCWicira17.pdf"  class="bluelink">General Batch-Calibration Framework</a>
+        <br>
+        - <a href="#ref2" class="bluelink">RGB-D Cameras Calibration [ref.3]</a>
+        <br>
+        for Training:
+        <br>
+        - <a href="http://www.sohu.com/a/217691740_100071565"  class="bluelink">Real Simulation Unified Platform</a>
+        <br>
+      </p>
+    </div>
+    <hr color=#987cb9 SIZE=1 />
+  </div>
+  
+  <div id="pubs">
+    <div class="width25 leftfloat" align="left" id="pub_title">
+      <br>
+      <a class="fontbig blacklink">Publication</a>
+    </div>
+    <div class="width75 leftfloat linebigheight" align="left" id="pub_content">
+      <p>
+        <a class="fontlarge">All publications: </a>
+        <a href="https://scholar.google.com/citations?user=h7vRddgAAAAJ&hl=zh-CN" class="fontlarge bluelink bb">Google Scholar</a>, 
+        <!-- <a href="https://orcid.org/0000-0003-1888-9947" class="fontlarge bluelink bb">ORCID</a>,  -->
+        <!-- <a href="https://publons.com/researcher/2932962/guangda-chen/" class="fontlarge bluelink bb">Publons</a>,  -->
+        <a href="https://www.researchgate.net/profile/Guangda_Chen4" class="fontlarge bluelink bb">ResearchGate</a>.
+        <a class="fontlarge"> Chinese patents: </a>
+        <a href="https://www.patentguru.com/cn/search?inventor=%22%E9%99%88%E5%B9%BF%E5%A4%A7%22&assignee=%22%E7%BD%91%E6%98%93%22%2C%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%22" 
+        class="fontlarge bluelink bb">PatentGuru</a> 
+      </p>
+      <!-- <p>
+
+      </p> -->
+      <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
+    <div id="papers-container">
+        <div class="loading">正在加载论文列表...</div>
+    </div>
+
+    <script>
+        // 从JSON文件加载论文数据
+        fetch('papers.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('网络响应不正常');
+                }
+                return response.json();
+            })
+            .then(papers => {
+                renderPapers(papers);
+            })
+            .catch(error => {
+                document.getElementById('papers-container').innerHTML = 
+                    `<div class="error">加载论文数据时出错: ${error.message}</div>`;
+            });
+
+        // 渲染论文列表
+        function renderPapers(papers) {
+            const container = document.getElementById('papers-container');
+            
+            if (!papers || papers.length === 0) {
+                container.innerHTML = '<div class="error">没有找到论文数据</div>';
+                return;
+            }
+            
+            let html = '<ol>';
+            
+            papers.forEach((paper, index) => { 
+                keywords_text = `${paper.keywords ? `<br><b>Keywords:</b> ${paper.keywords} ` : ''}`;
+                html += `
+                    <li>
+                        <div class="linebigheight" align="left" id="ref${index}">
+                            <a href="${paper.link}" class="fontnorm bluelink">${paper.title}</a>
+                            <br>
+                            ${paper.sub_title ? `<a href="${paper.link}" class="fontnorm bluelink">${paper.sub_title}</a><br>` : ''}
+                            <span class="pub-authors">${paper.authors}</span>
+                            
+                            <br>
+                            <i><a href="${paper.venueLink}" class="bluelink pub-venue">${paper.venue}</a></i>
+                            ${paper.rating ? `<a href="${paper.rating_link}" class="fontnorm bluelink">${paper.rating}</a>` : ''}
+                            ${paper.award ? `<b> <span class="award">${paper.award}</span></b>` : ''}
+                            <br>
+                            <a class="bluelink" onclick="toggleDisplay('bib${index}')">[BibTeX]</a>,
+                            ${paper.abstract ? `<a class="bluelink" onclick="toggleDisplay('abs${index}')">[Abstract]</a>,` : ''}
+                            ${paper.pdf ? `<a href="${paper.pdf}" class="bluelink">[PDF]</a>,` : ''}
+                            ${paper.pdf2 ? `<a href="${paper.pdf2}" class="bluelink">[PDF2]</a>,` : ''}
+                            ${paper.demo ? `<a href="${paper.demo}" class="bluelink">[Demo]</a>,` : ''}
+                            ${paper.slides ? `<a href="${paper.slides}" class="bluelink">[Slides]</a>,` : ''}
+                            ${paper.awardDoc ? `<a href="${paper.awardDoc}" class="bluelink">[Award]</a>,` : ''}
+                            ${paper.youTube ? `<a href="${paper.youTube}" class="bluelink">[YouTube]</a>,` : ''}
+                            ${paper.bili1 ? `<a href="${paper.bili1}" class="bluelink">[bili_1]</a>,` : ''}
+                            ${paper.bili2 ? `<a href="${paper.bili2}" class="bluelink">[bili_2]</a>` : ''}
+                            ${(paper.bili1 || paper.bili2) && !paper.bili2 ? '' : ''}
+                            <div id="bib${index}" style="display:none" class="bibtexdiv">${paper.bibtex}</div>
+                            ${paper.abstract ? `<div id="abs${index}" style="display:none" class="bibtexdiv"><b>Abstract:</b> ${paper.abstract} ${keywords_text}</div>` : ''}
+                        </div>
+                    </li>
+                    <hr>
+                `;
+            });
+            
+            html += '</ol>';
+            container.innerHTML = html;
+        }
+
+        // 切换显示/隐藏元素
+        function toggleDisplay(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.style.display = element.style.display === 'none' ? 'block' : 'none';
+            }
+        }
+    </script>
+      <p>
+        <b>*</b> These authors contributed equally to the work.
+        </p>
+      <hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>
+      <a href="https://www.patentguru.com/cn/search?inventor=%22%E9%99%88%E5%B9%BF%E5%A4%A7%22&assignee=%22%E7%BD%91%E6%98%93%22,%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%22&status=pat" class="award">授权专利</a>:
+      <ol id="patent-list"></ol>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+          <script>
+              fetch('patents.yaml')
+                  .then(response => response.text())
+                  .then(text => {
+                      const data = jsyaml.load(text);
+                      const patentList = document.getElementById('patent-list');
+                      data.patents.forEach(patent => {
+                          const listItem = document.createElement('li');
+                          let awardHtml = '';
+                          if (patent.url === 'https://www.patentguru.com/cn/CN117950401B') {
+                            awardHtml = "<a class='award'>NetEase\'s Top 10 Patents (2025)</a>";
+                          }
+                          listItem.innerHTML = `
+                              <div class="linebigheight" align="left">
+                                  <a href="${patent.url}" class="fontnorm bluelink">${patent.title}</a> ${awardHtml}
+                              </div>
+                          `;
+                          patentList.appendChild(listItem);
+                      });
+                  })
+                  .catch(error => console.error('Error loading YAML file:', error));
+          </script>
+    </div>
+    <hr color=#987cb9 SIZE=1 />
+  </div>
+
+  <div id="service">
+    <div class="width25 leftfloat" align="left" id="service_title">
+      <br>
+      <a class="fontbig blacklink">Other</a>
+    </div>
+    <div class="width75 leftfloat linebigheight" align="left" id="service_content">
+      <p>
+      Conference reviewer : 
+      <a href="https://www.iros2019.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2019</a>, 
+      <a href="http://www.icra2021.org/"  class="fontnorm bluelink fontverysmall bb"> ICRA 2021</a>,  
+      <a href="http://ieeesmc2021.org/"  class="fontnorm bluelink fontverysmall bb"> SMC 2021</a>, 
+      <a href="https://www.icra2022.org/"  class="fontnorm bluelink fontverysmall bb"> ICRA 2022</a>, 
+      <a href="https://iros2022.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2022</a>, 
+      <a href="https://www.icra2023.org/"  class="fontnorm bluelink fontverysmall bb"> ICRA 2023</a>, 
+      <a href="https://ieee-iros.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2023</a>, 
+      <a href="https://2025.ieeecase.org/"  class="fontnorm bluelink fontverysmall bb"> CASE 2025</a>, 
+      <a href="https://www.iros25.org/"  class="fontnorm bluelink fontverysmall bb"> IROS 2025</a>
+      <br>
+      </p>
+      <div id="reviewers"></div>
+      <script>
+        async function loadYAML() {
+            const response = await fetch('reviewers.yaml');
+            const yamlText = await response.text();
+            const data = jsyaml.load(yamlText);
+
+            const reviewersDiv = document.getElementById('reviewers');
+            const reviewerLinks = data.reviewers.map(reviewer => {
+                return `<a href="${reviewer.url}" class="fontnorm bluelink fontverysmall bb">${reviewer.name}</a>`;
+            });
+            reviewersDiv.innerHTML = "Journal reviewer : " + reviewerLinks.join(', ');
+        }
+        loadYAML().catch(console.error);
+    </script>
+    <br>
+      <p>
+      Links : 
+      <!-- <a href="https://www.douban.com/doulist/46245195/"  class="fontnorm bluelink">Favorite movies</a>,  -->
+      <a href="http://arxivdaily.com/topic/topic-detail/148"  class="fontnorm bluelink fontverysmall bb">arxivdaily.cs.RO</a>, 
+      <a href="https://git.ustc.edu.cn/"  class="fontnorm bluelink fontverysmall bb">USTC GitLab</a>, 
+      <a href="https://orcid.org/0000-0002-9502-1204"  class="fontnorm bluelink fontverysmall bb">Song-Jia Yi's ORCID</a>
+      <br>
+      </p>
+    </div>
+    <hr color=#987cb9 SIZE=2 />
+  </div>
+  
+<div>
+  <a href="https://info.flagcounter.com/S8jX"><img src="https://s01.flagcounter.com/countxl/S8jX/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+  <div id="disclaimers" style="display:none" class="bibtexdiv">
+    &emsp;The material provided on this website is to ensure the timely dissemination of academic and technical work. 
+    Copyright and all rights therein are retained by authors or by other copyright holders. 
+    All people copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. 
+    In most cases, these works may not be reposted without the explicit permission of the copyright holder.
+  </div> 
+  <div class="maxwidth" align="center" id="cpright">
+    <p><a>&copy; </a>
+    <a href="https://cgd-ai.github.io/" class="bluelink">Guangda Chen</a> 2019-2025. 
+    <a onclick="document.all.disclaimers.style.display=(document.all.disclaimers.style.display =='none')?'':'none'" class="bluelink">Click to read the disclaimer</a></p>
+  </div>
+</div>
+<!-- <script type="text/javascript" src="./main.js"></script> -->
+<script>
+  // 当网页向下滑动 20px 出现"返回顶部" 按钮
+  window.onscroll = function() {scrollFunction()};
+   
+  function scrollFunction() {console.log(121);
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+   
+  // 点击按钮，返回顶部
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+  </script>
+<script type="text/javascript">
+function get_width()
+{
+  screen_w = window.screen.availWidth;
+  if (screen_w > 1000)
+  {
+    return 1000;
+  }
+  else
+  {
+    return screen_w;
+  }
+}
+document.getElementById("page_size").style = "width:"+get_width() +"px";
+if (get_width() < 1000) {
+
+  maxline = "maxwidth leftfloat";
+  document.getElementById("title_div_left").className = maxline;
+  document.getElementById("imglove").src = "./pic/b.jpg";
+  document.getElementById("title_div_right").className = maxline;
+  // document.getElementById("imglove").style = "";
+  document.getElementById("title_div_right").align = "left";
+  document.getElementById("about_title").className = maxline;
+  document.getElementById("about_content").className = maxline;
+  document.getElementById("employ_title").className = maxline;
+  document.getElementById("employ_content").className = maxline;
+  document.getElementById("edu_title").className = maxline;
+  document.getElementById("edu_content").className = maxline;
+  document.getElementById("project_title").className = maxline;
+  document.getElementById("project_content").className = maxline;
+  document.getElementById("pub_title").className = maxline;
+  document.getElementById("pub_content").className = maxline;
+  document.getElementById("service_title").className = maxline;
+  document.getElementById("service_content").className = maxline;
+  
+  var e = document.getElementById("about_title");
+  e.innerHTML = e.innerHTML.replace('<br>', '');
+  // e = document.getElementById("title_br");
+  // e.innerHTML = e.innerHTML.replace('<br>', '');
+  var e = document.getElementById("img_br");
+  e.innerHTML = e.innerHTML.replace('<br><br><br>', '');
+  var e = document.getElementById("employ_title");
+  e.innerHTML = e.innerHTML.replace('<br>', '');
+  var e = document.getElementById("edu_title");
+  e.innerHTML = e.innerHTML.replace('<br>', '');
+  var e = document.getElementById("project_title");
+  e.innerHTML = e.innerHTML.replace('<br>', '');
+  var e = document.getElementById("pub_title");
+  e.innerHTML = e.innerHTML.replace('<br>', '');
+  var e = document.getElementById("service_title");
+  e.innerHTML = e.innerHTML.replace('<br>', '');
+}
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>

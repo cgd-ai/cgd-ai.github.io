@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__ide__getDiagnostics",
+      "Bash(node -e \"const fs=require\\('fs'\\);const html=fs.readFileSync\\('F:/网站/cgd-ai.github.io/index.html','utf8'\\);const m=html.match\\(/data-i18n\\(?:-html|-attr\\)?=\\\\\"\\([^\\\\\"]+\\)\\\\\"/g\\)||[];console.log\\('i18n attributes:',m.length\\);const js=fs.readFileSync\\('F:/网站/cgd-ai.github.io/app.js','utf8'\\);const enKeys=\\(js.match\\(/'[a-z][a-z._0-9]*': /g\\)||[]\\).length;console.log\\('translation keys \\(approx en+zh\\):',enKeys\\);\")",
+      "Bash(node --check \"F:/网站/cgd-ai.github.io/app.js\")",
+      "Bash(python -m http.server 8765)",
+      "Bash(curl *)"
+    ]
+  }
+}
