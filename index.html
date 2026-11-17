@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="meta.title">Guangda Chen — Head of Robotics Algorithms | Robotics, Embodied AI</title>
-    <meta name="description" data-i18n-attr="content:meta.description" content="Dr. Guangda Chen — Head of Robotics Algorithms at NetEase Fuxi Robotics, Ph.D. from USTC. Research on autonomous heavy machinery, deep reinforcement learning navigation, and embodied AI.">
+    <title data-i18n="meta.title">Guangda Chen — CTO | Robotics, Embodied AI</title>
+    <meta name="description" data-i18n-attr="content:meta.description" content="Dr. Guangda Chen — CTO at NetEase Lingdong, Ph.D. from USTC. Research on autonomous heavy machinery, deep reinforcement learning navigation, and embodied AI.">
     <meta name="author" content="Guangda Chen">
     <meta name="keywords" content="Guangda Chen, 陈广大, robotics, embodied AI, deep reinforcement learning, autonomous navigation, NetEase Fuxi, USTC, unmanned loader, excavator robot">
     <meta name="theme-color" content="#f5f3ee">
@@ -12,8 +12,8 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Guangda Chen — Head of Robotics Algorithms">
-    <meta property="og:description" content="Robotics · Automation · Embodied AI. Ph.D. USTC; Head of Robotics Algorithms at NetEase Fuxi Robotics.">
+    <meta property="og:title" content="Guangda Chen — CTO">
+    <meta property="og:description" content="Robotics · Automation · Embodied AI. Ph.D. USTC; CTO at NetEase Lingdong.">
     <meta property="og:image" content="https://cgd-ai.github.io/pic/CGD3.jpg">
     <meta property="og:url" content="https://cgd-ai.github.io/">
     <meta property="og:site_name" content="Guangda Chen">
@@ -22,8 +22,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Guangda Chen — Head of Robotics Algorithms">
-    <meta name="twitter:description" content="Robotics · Automation · Embodied AI. Ph.D. USTC; Head of Robotics Algorithms at NetEase Fuxi Robotics.">
+    <meta name="twitter:title" content="Guangda Chen — CTO">
+    <meta name="twitter:description" content="Robotics · Automation · Embodied AI. Ph.D. USTC; CTO at NetEase Lingdong.">
     <meta name="twitter:image" content="https://cgd-ai.github.io/pic/CGD3.jpg">
 
     <!-- Schema.org Person -->
@@ -35,8 +35,8 @@
       "alternateName": "陈广大",
       "url": "https://cgd-ai.github.io/",
       "image": "https://cgd-ai.github.io/pic/CGD3.jpg",
-      "jobTitle": "Head of Robotics Algorithms",
-      "worksFor": { "@type": "Organization", "name": "NetEase Fuxi Robotics", "url": "https://fuxi.163.com/" },
+      "jobTitle": "CTO",
+      "worksFor": { "@type": "Organization", "name": "NetEase Lingdong", "url": "https://fuxi.163.com/" },
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "University of Science and Technology of China", "url": "https://www.ustc.edu.cn/" },
         { "@type": "CollegeOrUniversity", "name": "China Medical University", "url": "http://www.cmu.edu.cn/" }
@@ -55,168 +55,177 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/source-serif-4@5/index.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css?v=20261117-refine">
 </head>
 <body>
-    <!-- 头部 -->
-    <header>
-        <div class="container">
-            <a href="./day.html" class="icon-link" ><img src="./pic/CGD3.jpg" alt="Guangda Chen" class="profile-img"></a>
-            <h1><span data-i18n="header.name">Guangda Chen</span>
-                            <a class="subtitle" itemprop="sameAs" content="https://orcid.org/0000-0003-1888-9947" href="https://orcid.org/0000-0003-1888-9947" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a>
-            </h1>
-            <!-- <p>NetEase Fuxi Robotics</p> -->
+    <!-- Compact personal letterhead with integrated navigation. -->
+    <header class="site-header">
+        <div class="container header-layout">
+            <div class="header-brand">
+                <a href="#overview" class="icon-link nav-link"><img src="./pic/CGD3.jpg" alt="Guangda Chen" class="profile-img" width="52" height="52"></a>
+                <h1><a href="#overview" class="header-name nav-link"><span data-i18n="header.name">Guangda Chen</span></a></h1>
+            </div>
+            <nav class="site-navigation" aria-label="Main navigation" data-i18n-attr="aria-label:nav.primary">
+                <ul class="nav-menu" id="primary-menu">
+                    <li><a href="#overview" class="active nav-link" aria-current="page" data-i18n="nav.overview">Overview</a></li>
+                    <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#publications" class="nav-link" data-i18n="nav.publications">Publications</a></li>
+                    <li><a href="#talks" class="nav-link" data-i18n="nav.talks">Talks</a></li>
+                </ul>
+            </nav>
+            <div class="header-tools">
+                <button type="button" class="lang-toggle" aria-label="Switch language">中</button>
+                <button type="button" class="theme-toggle" aria-label="Switch to dark mode">☾</button>
+                <button type="button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="primary-menu" aria-expanded="false" data-i18n-attr="aria-label:nav.menu_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
     
-    <!-- 导航菜单 -->
-    <nav>
-        <div class="container">
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" data-i18n-attr="aria-label:nav.menu_toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
-                <li><a href="#about" class="active nav-link" data-i18n="nav.about">About Me</a></li>
-                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
-                <li><a href="#publications" class="nav-link" data-i18n="nav.publications">Publications</a></li>
-            </ul>
-            <button type="button" class="lang-toggle" aria-label="Switch language">中</button>
-            <button type="button" class="theme-toggle" aria-label="Switch to dark mode">☾</button>
-        </div>
-    </nav>
-    
     <!-- 主要内容 -->
     <main class="container">
-        <!-- 首页部分 -->
-        <section id="home" class="page-section" style="display: none;">
-            <p class="home-tagline" data-i18n="home.tagline">Robotics &middot; Automation &middot; Embodied AI</p>
-
-            <div class="card-container">
-                <div class="card">
-                    <h3 data-i18n="home.card_about_title">About Me</h3>
-                    <p data-i18n="home.card_about_body">Dr. Guangda Chen currently serves as Head of Robotics Algorithms at Fuxi Robotics in NetEase.
-                    He holds a Ph.D. degree in Computer Science from the USTC (2021).</p>
-                    <button class="btn nav-btn" data-target="about"><span data-i18n="home.btn_learn_more">Learn more</span> <span class="btn-arrow">&rarr;</span></button>
+        <!-- CV-style overview: identity, contribution, experience, work and updates. -->
+        <section id="overview" class="page-section" aria-label="Personal overview" data-i18n-attr="aria-label:overview.page_label">
+            <div class="overview-intro">
+                <p class="overview-summary" data-i18n="overview.summary">Dr. Guangda Chen is the CTO at NetEase Lingdong. He received his Ph.D. in Computer Science from the University of Science and Technology of China in 2021 and conducted postdoctoral research at Zhejiang University from 2023 to 2025. His research and engineering work focus on embodied AI, perception, planning and control for autonomous construction machinery, and deep reinforcement learning for mobile robot navigation. He works to translate robotics research into reliable industrial deployment.</p>
+                <div class="overview-links">
+                    <a href="https://scholar.google.com/citations?user=h7vRddgAAAAJ">Google Scholar</a>
+                    <a href="https://github.com/cgdsss">GitHub</a>
+                    <a href="https://orcid.org/0000-0003-1888-9947">ORCID</a>
+                    <a href="https://www.linkedin.com/in/%E5%B9%BF%E5%A4%A7-%E9%99%88-1b0770109/">LinkedIn</a>
+                    <button type="button" id="cv-print" class="overview-cv-button" data-i18n="overview.save_cv">Print / Save CV</button>
                 </div>
-
-                <div class="card">
-                    <h3 data-i18n="home.card_projects_title">Projects</h3>
-                    <p data-i18n="home.card_projects_body">Research and development projects spanning heavy machine automation, deep reinforcement learning-based navigation and service robotics.</p>
-                    <button class="btn nav-btn" data-target="projects"><span data-i18n="home.btn_view_projects">View projects</span> <span class="btn-arrow">&rarr;</span></button>
-                </div>
-
-                <div class="card">
-                    <h3 data-i18n="home.card_publications_title">Publications</h3>
-                    <p data-i18n-html="home.card_publications_body">Academic publications, <a href="#talks" class="nav-link" style="color: var(--ink-blue); text-decoration: none;">conference presentations</a>, and granted patents in robotics, artificial intelligence, and autonomous systems.</p>
-                    <button class="btn nav-btn" data-target="publications"><span data-i18n="home.btn_view_publications">View publications</span> <span class="btn-arrow">&rarr;</span></button>
-                </div>
+                <p class="overview-contact"><span data-i18n="home.contact_email">Email:</span> <a href="mailto:cgdsss@mail.ustc.edu.cn">cgdsss@mail.ustc.edu.cn</a> <span aria-hidden="true">·</span> <a href="mailto:cgdsss@zju.edu.cn">cgdsss@zju.edu.cn</a></p>
             </div>
 
-            <div class="content-section">
-                <h3 data-i18n="home.contact_title">Contact Information</h3>
-                <p><strong data-i18n="home.contact_email">Email:</strong>
-                <a href=mailto:cgdsss@mail.ustc.edu.cn >cgdsss@mail.ustc.edu.cn</a>;
-                <a href=mailto:cgdsss@zju.edu.cn >cgdsss@zju.edu.cn</a>
-                </p>
-                <p><strong data-i18n="home.contact_address">Address:</strong> <span data-i18n="home.address_value">NetEase, 399 Wangshang Road, Binjiang District, Hangzhou, China</span> <a href="https://surl.amap.com/UVunOpU8D8" class="icon-link" ><img src="./pic/gmap.ico" loading="lazy" decoding="async"></a></p>
-                <p>
-                    <a href="https://github.com/cgdsss" title="GitHub">GitHub</a> |
-                    <a href="https://scholar.google.com/citations?user=h7vRddgAAAAJ&hl=zh-CN" title="Google Scholar">Google Scholar</a> |
-                    <a href="https://www.linkedin.com/in/%E5%B9%BF%E5%A4%A7-%E9%99%88-1b0770109/" title="LinkedIn">LinkedIn</a>
-                </p>
-            </div>
-        </section>
-        
-        <!-- 关于我部分 -->
-        <section id="about" class="page-section">
-            <!-- <h2 class="section-title">About Me</h2> -->
-            <br>
-            <div class="content-section">
-                <h3 data-i18n="about.biography">Biography</h3>
-                <p data-i18n-html="about.biography_body">Dr. Guangda Chen is currently working as Head of Robotics Algorithms at <a href="https://fuxi.163.com/"  class="bluelink">Fuxi Robotics in NetEase</a>.
-        He received his Ph.D. degree in Computer Science from
-      <a href="https://www.ustc.edu.cn/" class="bluelink" >University of Science and Technology of China </a> in 2021
-      (BA17011, advised by Prof.
-      <a href="https://cs.ustc.edu.cn/2020/0828/c23235a460075/pagem.htm"  class="bluelink">Xiaoping Chen</a> in the
-      <a href="http://ai.ustc.edu.cn/" class="bluelink" >USTC Robotics Laboratory</a>).
-      Before joining USTC Robotics Lab in 2015,
-      he received a Bachelor of Administration from <a href="http://www.cmu.edu.cn/"  class="bluelink">China Medical
-        University</a> in 2014.
-        As a graduate student, he focused on researching mobile robot navigation in dynamic and crowded environments.
-        Currently, he is dedicated to developing and applying innovative automation and intelligent technologies in heavy construction machinery.</p>
-                <p><strong data-i18n="about.contact_email">Email:</strong>
-                <a href="mailto:cgdsss@mail.ustc.edu.cn" class="bluelink">cgdsss@mail.ustc.edu.cn</a>;
-                <a href="mailto:cgdsss@zju.edu.cn" class="bluelink">cgdsss@zju.edu.cn</a></p>
-      <!-- <p>
-      <span data-i18n="about.find_him_on">Find him on:</span>
-      <br>
-      <a href="https://github.com/cgdsss"   class="icon-link" title="GitHub"><img src="./pic/github.ico" loading="lazy" decoding="async"></a>
-      <a href="https://scholar.google.com/citations?user=h7vRddgAAAAJ&hl=zh-CN" class="icon-link"  title="Google Scholar"><img src="./pic/gs.ico" loading="lazy" decoding="async"></a>
-      <a href="https://space.bilibili.com/14005427"   class="icon-link" title="bilibili"><img src="./pic/bili.ico" loading="lazy" decoding="async"></a>
-      <a href="https://www.douban.com/people/cgdsss/"   title="豆瓣" class="icon-link"><img src="./pic/douban.ico" loading="lazy" decoding="async"></a>
-      <a href="https://music.163.com/#/user/home?id=430012241"   title="网易云音乐" class="icon-link"><img src="./pic/music.ico" loading="lazy" decoding="async"></a>
-      <a href="https://www.linkedin.com/in/%E5%B9%BF%E5%A4%A7-%E9%99%88-1b0770109/"   class="icon-link" title="Linkedin"><img src="./pic/link.ico" loading="lazy" decoding="async"></a>
-      <a href="https://www.facebook.com/guangda.chen.9"   title="facebook" class="icon-link"><img src="./pic/facebook.ico" loading="lazy" decoding="async"></a>
-      <a href="https://twitter.com/cgdsss_USTC"   title="Twitter" class="icon-link"><img src="./pic/twitter.ico" loading="lazy" decoding="async"></a>
-      <a href="https://www.instagram.com/guangdachen/"   title="instagram" class="icon-link"><img src="./pic/ins.ico" loading="lazy" decoding="async"></a>
-      <a href="https://plus.google.com/u/0/100646927760929911525"   title="Google+" class="icon-link"><img src="./pic/googleplus.ico" loading="lazy" decoding="async"></a>
-      </p> -->
-            </div>
+            <section class="overview-block" aria-labelledby="overview-news-title">
+                <div class="overview-section-heading">
+                    <h2 id="overview-news-title" data-i18n="overview.news_title">Recent Updates</h2>
+                </div>
+                <ul class="overview-news">
+                    <li>
+                        <time datetime="2026-10">2026.10</time>
+                        <div><span class="overview-news-type" data-i18n="overview.news_type_talk">[Talk]</span><a href="https://mp.weixin.qq.com/s/SbAWjmrIWU5sOkz6LsI7dA" data-i18n="overview.news_arts">ARTS 2026 · Deploying embodied AI for material interaction tasks</a><p class="overview-news-detail" data-i18n="overview.news_arts_detail">Industry Entrepreneurship Pioneers Forum · Beijing</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2026-08">2026.08</time>
+                        <div><span class="overview-news-type" data-i18n="overview.news_type_talk">[Talk]</span><a href="https://www.zjdxyt.com/discovery/info/15084" data-i18n="overview.news_zju">Zhejiang University · From automated loading to autonomous stockpiling</a><p class="overview-news-detail" data-i18n="overview.news_zju_detail">Geotechnical Forum No. 106 · Hangzhou</p></div>
+                    </li>
+                    <li>
+                        <time datetime="2026-03">2026.03</time>
+                        <div><span class="overview-news-type" data-i18n="overview.news_type_paper">[Paper]</span><a href="https://doi.org/10.1016/j.engappai.2026.113908" data-i18n="overview.news_paper">Autonomous loader shoveling control research published in EAAI</a><p class="overview-news-detail">Engineering Applications of Artificial Intelligence · Vol. 167</p></div>
+                    </li>
+                </ul>
+            </section>
 
-            <div class="content-section">
-                <h3 data-i18n="about.employment">Employment</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date"><span data-i18n="about.emp.netease_dates">2021 — Present</span></div>
-                        <h4 data-i18n="about.emp.netease_role">Algorithm Lead</h4>
-                        <p><strong><a href="https://ir.netease.com/" data-i18n="about.emp.netease_org">NetEase, Inc.</a></strong></p>
-                        <p>- <a href="https://fuxi.163.com/" data-i18n="about.emp.netease_sub">Fuxi Robotics</a></p>
+            <section class="overview-block" aria-labelledby="overview-experience-title">
+                <div class="overview-section-heading">
+                    <h2 id="overview-experience-title" data-i18n="overview.experience_title">Experience &amp; Education</h2>
+                </div>
+                <div class="overview-experience">
+                    <div class="overview-experience-group">
+                        <h3 data-i18n="about.employment">Employment</h3>
+                        <dl class="overview-cv-list">
+                            <div class="overview-cv-row">
+                                <dt data-i18n="about.emp.netease_dates">2021 — Present</dt>
+                                <dd>
+                                    <h4><a href="https://fuxi.163.com/" data-i18n="overview.netease_org">NetEase Lingdong</a></h4>
+                                    <p class="overview-cv-detail" data-i18n="overview.netease_role">CTO · Autonomous Construction Machinery</p>
+                                </dd>
+                            </div>
+                            <div class="overview-cv-row">
+                                <dt data-i18n="about.emp.zju_dates">2023 — 2025</dt>
+                                <dd>
+                                    <h4><a href="https://www.zju.edu.cn/" data-i18n="overview.zju_org">Zhejiang University</a></h4>
+                                    <p class="overview-cv-detail" data-i18n-html="overview.postdoc_detail">Postdoctoral Researcher · Control Science and Engineering<br>Advisor: Prof. <a href="https://person.zju.edu.cn/0097062">Rong Xiong</a></p>
+                                </dd>
+                            </div>
+                        </dl>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date"><span data-i18n="about.emp.zju_dates">2023 — 2025</span></div>
-                        <h4 data-i18n="about.emp.zju_role">Postdoctoral Researcher</h4>
-                        <p data-i18n-html="about.emp.zju_org_html"><strong><a href="https://www.zju.edu.cn/">Zhejiang University</a></strong> [Prof. <a href="https://person.zju.edu.cn/0097062">Rong Xiong</a>]</p>
-                        <p>- <a href="http://www.cse.zju.edu.cn/" data-i18n="about.emp.zju_sub">College of Control Science and Engineering</a></p>
+                    <div class="overview-experience-group">
+                        <h3 data-i18n="about.education">Education</h3>
+                        <dl class="overview-cv-list">
+                            <div class="overview-cv-row">
+                                <dt data-i18n="about.edu.phd_dates">2015 — 2021</dt>
+                                <dd>
+                                    <h4><a href="https://www.ustc.edu.cn/" data-i18n="overview.ustc_org">University of Science and Technology of China</a></h4>
+                                    <p class="overview-cv-detail" data-i18n-html="overview.phd_detail">Ph.D. in Computer Science<br>Advisor: Prof. <a href="https://cs.ustc.edu.cn/2020/0828/c23235a460075/pagem.htm">Xiaoping Chen</a> · <a href="http://ai.ustc.edu.cn/">USTC Robotics Laboratory</a></p>
+                                </dd>
+                            </div>
+                            <div class="overview-cv-row">
+                                <dt data-i18n="about.edu.ba_dates">2011 — 2014</dt>
+                                <dd>
+                                    <h4><a href="http://www.cmu.edu.cn/" data-i18n="about.edu.ba_org">China Medical University</a></h4>
+                                    <p class="overview-cv-detail" data-i18n="overview.ba_detail">Bachelor of Administration · Medical Informatics</p>
+                                </dd>
+                            </div>
+                            <div class="overview-cv-row">
+                                <dt data-i18n="about.edu.stom_dates">2010 — 2011</dt>
+                                <dd>
+                                    <h4><a href="http://www.cmu.edu.cn/" data-i18n="about.edu.stom_org">China Medical University</a></h4>
+                                    <p class="overview-cv-detail" data-i18n="about.edu.stom_role">Stomatology</p>
+                                </dd>
+                            </div>
+                        </dl>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="content-section">
-                <h3 data-i18n="about.education">Education</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date"><span data-i18n="about.edu.phd_dates">2015 — 2021</span></div>
-                        <h4 data-i18n="about.edu.phd_role">Ph.D. in Computer Science</h4>
-                        <p data-i18n-html="about.edu.phd_org_html"><strong><a href="https://www.ustc.edu.cn/">University of Science and Technology of China</a></strong> [Prof. <a href="https://cs.ustc.edu.cn/2020/0828/c23235a460075/pagem.htm">Xiaoping Chen</a>]</p>
-                        <p>- <a href="http://cs.ustc.edu.cn/" data-i18n="about.edu.phd_sub">School of Computer Science and Technology</a></p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date"><span data-i18n="about.edu.ba_dates">2011 — 2014</span></div>
-                        <h4 data-i18n="about.edu.ba_role">Bachelor of Administration</h4>
-                        <p><strong><a href="http://www.cmu.edu.cn/" data-i18n="about.edu.ba_org">China Medical University</a></strong></p>
-                        <p>- <a href="https://www.cmu.edu.cn/cmudmi/xygk/xyjj.htm" data-i18n="about.edu.ba_sub">Medical Informatics</a></p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date"><span data-i18n="about.edu.stom_dates">2010 — 2011</span></div>
-                        <h4 data-i18n="about.edu.stom_role">Stomatology</h4>
-                        <p><strong><a href="http://www.cmu.edu.cn/" data-i18n="about.edu.stom_org">China Medical University</a></strong></p>
-                        <p>- <a href="https://www.cmudental.com/" data-i18n="about.edu.stom_sub">Stomatology</a></p>
-                    </div>
+            <section class="overview-block" aria-labelledby="overview-work-title">
+                <div class="overview-section-heading">
+                    <h2 id="overview-work-title" data-i18n="overview.work_title">Selected Work</h2>
+                    <a href="#projects" class="overview-more nav-link" data-i18n="overview.all_projects">All projects →</a>
                 </div>
-            </div>
+                <div class="overview-work-list">
+                    <article class="overview-work">
+                        <a href="#project-loader" class="overview-work-image nav-link"><img src="./pic/loader.jpg" alt="Autonomous loader working at an industrial site" data-i18n-attr="alt:overview.loader_alt" loading="lazy" decoding="async"></a>
+                        <div class="overview-work-body">
+                            <h3><a href="#project-loader" class="nav-link" data-i18n="overview.loader_title">Autonomous Loaders</a></h3>
+                            <p data-i18n="overview.loader_body">Intelligent material handling in industrial sites: autonomous navigation, robust shoveling and embodied AI-based stockpiling.</p>
+                            <div class="overview-work-links">
+                                <a href="pdf/1-s2.0-S0952197626001892-main.pdf" class="overview-venue overview-venue-journal">EAAI 2026</a>
+                                <a href="#project-loader" class="overview-more nav-link" data-i18n="overview.project_details">Project details →</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="overview-work">
+                        <a href="#project-excavator" class="overview-work-image nav-link"><img src="./pic/excavator.jpg" alt="Excavator robot and hydraulic control system" data-i18n-attr="alt:overview.excavator_alt" loading="lazy" decoding="async"></a>
+                        <div class="overview-work-body">
+                            <h3><a href="#project-excavator" class="nav-link" data-i18n="overview.excavator_title">Excavator Robots</a></h3>
+                            <p data-i18n="overview.excavator_body">Hydraulic modeling, precise actuation control and autonomous planning for human-in-the-loop excavation.</p>
+                            <div class="overview-work-links">
+                                <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf" class="overview-venue">ICTAI 2023</a>
+                                <a href="https://youtu.be/N6I0WZGSF68" data-i18n="overview.demo">Demo</a>
+                                <a href="#project-excavator" class="overview-more nav-link" data-i18n="overview.project_details">Project details →</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="overview-work">
+                        <a href="#project-drl" class="overview-work-image nav-link"><img src="./pic/drl_nav.jpg" alt="Mobile robot navigating among pedestrians" data-i18n-attr="alt:overview.drl_alt" loading="lazy" decoding="async"></a>
+                        <div class="overview-work-body">
+                            <h3><a href="#project-drl" class="nav-link" data-i18n="overview.drl_title">Deep Reinforcement Learning Navigation</a></h3>
+                            <p data-i18n="overview.drl_body">Map-based obstacle avoidance, multi-robot collision avoidance and crowd-aware navigation, from simulation to real robots.</p>
+                            <div class="overview-work-links">
+                                <a href="pdf/ICNSC_2020_paper_11.pdf" class="overview-venue">ICNSC 2020</a>
+                                <a href="pdf/IROS_2021_PedNav.pdf" class="overview-venue">IROS 2021</a>
+                                <a href="pdf/ICRA2022_BEEP_FINAL_06_03.pdf" class="overview-venue">ICRA 2022</a>
+                                <a href="https://github.com/DRL-Navigation" data-i18n="overview.code">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
         </section>
         
         <!-- 项目部分 -->
         <section id="projects" class="page-section" style="display: none;">
             <!-- <h2 class="section-title">Projects</h2> Group Leader, Planning and Control Group, Fuxi Robotics in NetEase. -->
             <br>
-            <div class="content-section">
+            <div class="content-section" id="project-loader">
                 <span class="project-org-tag project-org-netease">NetEase</span>
                 <h3 data-i18n="projects.loader_title">Unmanned Loader (2023 - Present)</h3>
                 <div class="project-content">
@@ -225,7 +234,7 @@
                         <ul>
                             <li>High-Precision Hydraulic & Propulsion Control (<a href="https://mp.weixin.qq.com/s/KPr6EH8wozEnLDP1e_gi4A">Diesel</a> / <a href="https://mp.weixin.qq.com/s/5x0-5_HSsuYDVoltJ6N4mA">Electric</a>)</li>
                             <li>Autonomous Mobility & Navigation</li>
-                            <li><a href="https://doi.org/10.1016/j.engappai.2026.113908">Efficient and Robust Shoveling Control System</a> <a href="pdf/1-s2.0-S0952197626001892-main.pdf">[Paper]</a></li>
+                            <li><a href="https://doi.org/10.1016/j.engappai.2026.113908">Efficient and Robust Shoveling Control System</a> <a href="pdf/1-s2.0-S0952197626001892-main.pdf" class="project-paper-badge project-paper-badge-journal" title="Engineering Applications of Artificial Intelligence · 2026 — View paper (PDF)">EAAI 2026</a></li>
                             <li>Industry's First Embodied AI-based Autonomous Stacking</li>
                             <li><a href="https://lingdong.fuxi.163.com/productSummary/cabin_cleaner">Multi-Terminal Remote Control & Assistance System</a></li>
                         </ul>
@@ -235,14 +244,14 @@
                     </div>
                 </div>
             </div>
-            <div class="content-section">
+            <div class="content-section" id="project-excavator">
                 <span class="project-org-tag project-org-netease">NetEase</span>
                 <h3 data-i18n="projects.excavator_title">Excavator Robot (2021 - 2023)</h3>
                 <div class="project-content">
                     <div class="project-text" data-i18n-html="projects.excavator_body">
-                        An autonomous planning and control system for excavators in human-robot collaborative applications. Details: <a href="https://lingdong.fuxi.163.com/productSummary/wj?lang=en">Official Website</a> | <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf">Paper</a> | <a href="https://youtu.be/N6I0WZGSF68">Demo</a>
+                        An autonomous planning and control system for excavators in human-robot collaborative applications. Details: <a href="https://lingdong.fuxi.163.com/productSummary/wj?lang=en">Official Website</a>
                         <ul>
-                            <li>Hydraulic Actuation Control</li>
+                            <li>Hydraulic Actuation Control <a href="pdf/Modeling and Control of General Hydraulic Excavator for Human-in-the-loop Automation.pdf" class="project-paper-badge" title="IEEE International Conference on Tools with Artificial Intelligence · 2023 — View paper (PDF)">ICTAI 2023</a>, <a href="https://youtu.be/N6I0WZGSF68" class="bluelink">[Demo]</a></li>
                             <li>Autonomous Digging</li>
                             <li>Autonomous Navigation</li>
                             <li>Game-Inspired Teleoperation</li>
@@ -254,7 +263,7 @@
                 </div>
             </div>
 
-            <div class="content-section">
+            <div class="content-section" id="project-drl">
                 <span class="project-org-tag project-org-ustc">USTC</span>
                 <h3 data-i18n="projects.drl_title">DRL-based Navigation (2019 - 2021)</h3>
 
@@ -263,19 +272,20 @@
                 Group Leader, <a href="https://github.com/DRL-Navigation" class="bluelink">Open source code on GitHub</a>
                 <ul>
           <li>
-            <a href="pdf/ICNSC_2020_paper_11.pdf" class="bluelink"> DQN-based Obstacle Avoidance</a>, <a href="https://youtu.be/Eq4AjsFH_cU"  class="bluelink">[Demo]</a>
+            <a href="pdf/ICNSC_2020_paper_11.pdf" class="bluelink project-paper-link" title="IEEE International Conference on Networking, Sensing and Control · 2020 — View paper (PDF)"> DQN-based Obstacle Avoidance<span class="project-paper-badge">ICNSC 2020</span></a> <a href="pdf/ICNSC2020Award.pdf" class="project-paper-award" title="ICNSC 2020 — View award certificate">Best Student Paper Award</a>
+            <!-- <a href="https://youtu.be/Eq4AjsFH_cU"  class="bluelink">[Demo]</a> -->
           </li>
           <li>
-            <a href="pdf/IROS_2021_DRQNNav.pdf" class="bluelink"> DRQN-based 3D Obstacle Avoidance</a>, <a href="https://youtu.be/cnCid0qOZg4"  class="bluelink">[Demo]</a>
+            <a href="pdf/IROS_2021_DRQNNav.pdf" class="bluelink project-paper-link" title="IEEE/RSJ International Conference on Intelligent Robots and Systems · 2021 — View paper (PDF)"> DRQN-based 3D Obstacle Avoidance<span class="project-paper-badge">IROS 2021</span></a>, <a href="https://youtu.be/cnCid0qOZg4"  class="bluelink">[Demo]</a>
           </li>
           <li>
-            <a href="pdf/ICTAI_2020.pdf" class="bluelink"> Multi-Robot Collision Avoidance</a>, <a href="https://youtu.be/KOb1q23L7-U"  class="bluelink">[Demo]</a>
+            <a href="pdf/ICTAI_2020.pdf" class="bluelink project-paper-link" title="IEEE International Conference on Tools with Artificial Intelligence · 2020 — View paper (PDF)"> Multi-Robot Collision Avoidance<span class="project-paper-badge">ICTAI 2020</span></a>, <a href="https://youtu.be/KOb1q23L7-U"  class="bluelink">[Demo]</a>
           </li>
           <li>
-            <a href="pdf/IROS_2021_PedNav.pdf" class="bluelink">Crowd Navigation</a>, <a href="https://www.bilibili.com/video/BV1Vb4y1D7R6"  class="bluelink">[Demo]</a>, <a href="gitstats/authors.html" class="bluelink" target="_blank"> [Code statistics] </a>
+            <a href="pdf/IROS_2021_PedNav.pdf" class="bluelink project-paper-link" title="IEEE/RSJ International Conference on Intelligent Robots and Systems · 2021 — View paper (PDF)">Crowd Navigation<span class="project-paper-badge">IROS 2021</span></a>, <a href="https://www.bilibili.com/video/BV1Vb4y1D7R6"  class="bluelink">[Demo]</a>, <a href="gitstats/authors.html" class="bluelink" target="_blank"> [Code statistics] </a>
           </li>
           <li>
-            <a href="pdf/ICRA2022_BEEP_FINAL_06_03.pdf" class="bluelink">Crowd Navigation with Interaction Capacity</a>
+            <a href="pdf/ICRA2022_BEEP_FINAL_06_03.pdf" class="bluelink project-paper-link" title="IEEE International Conference on Robotics and Automation · 2022 — View paper (PDF)">Crowd Navigation with Interaction Capacity<span class="project-paper-badge">ICRA 2022</span></a>
           </li>
                 </ul>
                     </div>
@@ -374,14 +384,14 @@
                 <p>
                 for Testing:
                 <br>
-                - <a href="pdf/Cleaning_Robots_Test.pdf" class="bluelink">Cleaning Robots Test</a><br>
+                - <a href="pdf/Cleaning_Robots_Test.pdf" class="bluelink project-paper-link" title="International Conference on Intelligent Robotics and Applications · 2017 — View paper (PDF)">Cleaning Robots Test<span class="project-paper-badge">ICIRA 2017</span></a><br>
                 - <a href="http://roboticsbase.ustc.edu.cn/"  class="bluelink">Anhui Robot Technology Standard Innovation Base</a>
                 <br>
                 for Calibration:
                 <br>
-                - <a href="http://staff.ustc.edu.cn/~wufeng02/doc/pdf/ZCWicira17.pdf"  class="bluelink">General Batch-Calibration Framework</a>
+                - <a href="http://staff.ustc.edu.cn/~wufeng02/doc/pdf/ZCWicira17.pdf"  class="bluelink project-paper-link" title="International Conference on Intelligent Robotics and Applications · 2017 — View paper (PDF)">General Batch-Calibration Framework<span class="project-paper-badge">ICIRA 2017</span></a>
                 <br>
-                - <a href="pdf/rgbd_cal_j.pdf" class="bluelink">RGB-D Cameras Calibration</a>
+                - <a href="pdf/rgbd_cal_j.pdf" class="bluelink project-paper-link" title="IEEE Sensors Journal · 2019 — View paper (PDF)">RGB-D Cameras Calibration<span class="project-paper-badge project-paper-badge-journal">IEEE Sens. J. 2019</span></a>
                 <br>
                 for Training:
                 <br>
@@ -484,7 +494,59 @@
 
         <div class="talks-gallery">
 
-            <!-- Talk 1 -->
+            <!-- ARTS 2026 — Industry Entrepreneurship Pioneers Forum -->
+            <div class="talk-item" id="talk-arts-2026">
+                <div class="talk-header">
+                    <img src="./talks/arts/speaker.jpg" alt="Guangda Chen presenting at ARTS 2026" data-i18n-attr="alt:talks.arts.photo_speaker" class="talk-image" loading="lazy" decoding="async">
+                    <span class="talk-badge industry" data-i18n="talks.arts.badge">ARTS 2026</span>
+                </div>
+                <div class="talk-content">
+                    <h4 class="talk-title" data-i18n="talks.arts.title">具身智能在工程机械物料交互作业中的落地实践</h4>
+                    <p class="talk-conference" data-i18n="talks.arts.conference">第四届自主机器人技术研讨会（ARTS 2026）· 企业创业先锋论坛</p>
+                    <p class="talk-date" data-i18n="talks.arts.date">2026 年 10 月 30–31 日 | 北京 · 首都国际会议中心</p>
+                    <p class="talk-description" data-i18n="talks.arts.description">本报告聚焦装载机铲料、堆料与挖掘机装车等工程机械物料交互任务，分享具身智能从技术研究到真实场景落地的实践：通过融合规则与数据驱动方法，实现装载机全流程无人作业与拌合站常态化运营；通过“灵掘”端到端具身模型，探索露天矿山挖掘机自主装车及复杂环境下的工程应用。</p>
+                    <p class="talk-description" data-i18n-html="talks.arts.links">相关报道：<a href="https://mp.weixin.qq.com/s/8eG1aH8xbU6MRUMwHONTVw">活动报道</a><br>论坛介绍：<a href="https://mp.weixin.qq.com/s/SbAWjmrIWU5sOkz6LsI7dA">嘉宾阵容与报告介绍</a></p>
+                    <div class="photos-section">
+                        <h5 data-i18n="talks.event_photos">现场图片</h5>
+                        <div class="photos-grid" data-count="3">
+                            <div class="photo-item">
+                                <img src="./talks/arts/slides.jpg" alt="Guangda Chen explaining autonomous loader shoveling at ARTS 2026" data-i18n-attr="alt:talks.arts.photo_slides" loading="lazy" decoding="async">
+                            </div>
+                            <div class="photo-item">
+                                <img src="./talks/arts/podium.jpg" alt="Guangda Chen speaking at the ARTS 2026 podium" data-i18n-attr="alt:talks.arts.photo_podium" loading="lazy" decoding="async">
+                            </div>
+                            <div class="photo-item">
+                                <img src="./talks/arts/speaker.jpg" alt="Guangda Chen presenting at ARTS 2026" data-i18n-attr="alt:talks.arts.photo_speaker" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zhejiang University Geotechnical Forum -->
+            <div class="talk-item" id="talk-zju-2026">
+                <div class="talk-header">
+                    <img src="./talks/zju/1.jpg" alt="Guangda Chen receiving a commemorative certificate after the Zhejiang University talk" class="talk-image" loading="lazy" decoding="async">
+                    <span class="talk-badge invited" data-i18n="talks.zju.badge">岩土论道 第106期</span>
+                </div>
+                <div class="talk-content">
+                    <h4 class="talk-title" data-i18n="talks.zju.title">基于数据驱动的工程机械智能作业技术：从自动上料到自主堆料</h4>
+                    <p class="talk-conference" data-i18n="talks.zju.conference">浙江大学“岩土论道”第106期学术报告</p>
+                    <p class="talk-date" data-i18n="talks.zju.date">2026年8月15日 | 浙江大学紫金港校区 安中大楼A216</p>
+                    <p class="talk-description" data-i18n="talks.zju.description">本报告围绕混凝土拌合站等复杂工业场景下的装载机智能化与无人化实践，介绍“数据驱动”的技术路线，分享从自动上料到自主堆料的全流程无人作业能力建设、常态化无人运营情况，以及相关技术向港口、矿山等场景迁移的探索。</p>
+                    <p class="talk-description" data-i18n-html="talks.zju.links">报告官方链接：<a href="https://www.zjdxyt.com/discovery/info/15084">浙江大学滨海和城市岩土工程研究中心</a></p>
+                    <div class="photos-section">
+                        <h5 data-i18n="talks.event_photos">Event Photos</h5>
+                        <div class="photos-grid" data-count="1">
+                            <div class="photo-item">
+                                <img src="./talks/zju/1.jpg" alt="Guangda Chen receiving a commemorative certificate after the Zhejiang University talk" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSDN AI Singularity Summit -->
             <div class="talk-item">
                 <div class="talk-header">
                     <img src="./talks/csdn/1.jpg" alt="IROS 2021 Presentation" class="talk-image" loading="lazy" decoding="async">
@@ -653,7 +715,7 @@
             <div class="footer-links">
                 <a href="https://orcid.org/0000-0002-9502-1204" class="fontnorm bluelink fontverysmall bb" data-i18n="footer.songjia">Song-Jia Yi's ORCID</a>
                 <!-- <a href="old.html" class="fontnorm bluelink fontverysmall bb" title="Visit the previous version of this site">📁 Old Website</a> -->
-                <a href="https://claude.com/claude-code" class="fontnorm bluelink fontverysmall bb" target="_blank" rel="noopener" title="This site was designed, refactored, and continuously maintained in collaboration with Anthropic's Claude Code — covering layout, styling, data loading, and accessibility improvements." data-i18n="footer.maintained" data-i18n-attr="title:footer.maintained_title">🤖 Designed &amp; maintained with Claude Code (Anthropic)</a>
+                <a href="https://www.deepseek.com/" class="fontnorm bluelink fontverysmall bb" target="_blank" rel="noopener" title="This site was designed and maintained with DeepSeek — covering layout, styling, data loading, and accessibility improvements." data-i18n="footer.maintained" data-i18n-attr="title:footer.maintained_title">🤖 Designed &amp; maintained with DeepSeek</a>
             </div>
         </div>
         
@@ -665,6 +727,6 @@
     <!-- 返回顶部按钮 -->
     <a href="#" class="back-to-top" aria-label="Back to top" data-i18n-attr="aria-label:back_to_top"><span class="back-to-top-arrow">↑</span></a>
     
-    <script src="app.js" defer></script>
+    <script src="app.js?v=20261117-links" defer></script>
 </body>
 </html>
